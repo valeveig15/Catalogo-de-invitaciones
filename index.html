@@ -8,21 +8,16 @@
 </head>
 <body>
 
-  <!-- Tarjeta Contenedora Principal -->
   <main class="invitacion-card">
     
-    <!-- SECCIÓN SUPERIOR: Dragón Volando Animado -->
+    <!-- Dragón Animado -->
     <section class="dragon-section">
       <div class="dragon-wrapper">
         <svg class="dragon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
           <g class="dragon-body">
-            <!-- Cabeza y Cuello -->
             <path d="M140 50 Q160 45 170 40 Q165 50 150 55 Z" fill="#2d3748" />
-            <!-- Cuerpo y Cola -->
             <path d="M80 60 Q110 50 140 50 Q110 70 80 65 Q50 60 30 70 Q45 62 70 60" fill="#2d3748" />
-            <!-- Ala Izquierda / Trasera -->
             <path class="wing wing-back" d="M105 52 L70 20 Q95 25 110 40 Z" fill="#4a5568" />
-            <!-- Ala Derecha / Frontal -->
             <path class="wing wing-front" d="M110 52 L80 10 Q115 20 125 45 Z" fill="#1a202c" />
           </g>
         </svg>
@@ -30,7 +25,7 @@
       <p class="dragon-subtext">✦ ¡Una gran aventura está por comenzar! ✦</p>
     </section>
 
-    <!-- SECCIÓN CENTRAL: Información del Evento -->
+    <!-- Información del Evento -->
     <section class="contenido-texto">
       <h1>¡Estás Invitado!</h1>
       <p class="evento-subtitulo">Acompáñanos a celebrar un día lleno de magia, naturaleza y momentos inolvidables.</p>
@@ -44,99 +39,208 @@
       <a href="#confirmar" class="btn-confirmar">Confirmar Asistencia</a>
     </section>
 
-    <!-- SECCIÓN INFERIOR: Jardín de Plantas en Maceta (SVG) -->
+    <!-- Jardín Realista de Macetas SVG -->
     <section class="jardin-container">
-      <svg class="plantas-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 370">
-        <!-- Estante / Suelo -->
-        <line x1="20" y1="360" x2="580" y2="360" stroke="#1f2421" stroke-width="2.5" stroke-linecap="round"/>
+      <svg class="plantas-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380">
+        <defs>
+          <!-- Degradados 3D para Macetas -->
+          <linearGradient id="terracota-3d" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#aa4f33"/>
+            <stop offset="35%" stop-color="#e27252"/>
+            <stop offset="70%" stop-color="#cb6142"/>
+            <stop offset="100%" stop-color="#8a3a22"/>
+          </linearGradient>
 
-        <!-- 1. MACETA IZQUIERDA (FICUS / ARBOLITO) -->
-        <g id="maceta-1-ficus">
-          <ellipse cx="120" cy="358" rx="35" ry="5" fill="#cf7a58" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 88,352 L 152,352 L 148,358 L 92,358 Z" fill="#b86141" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 80,260 L 160,260 L 148,352 L 92,352 Z" fill="#df825f" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
-          <ellipse cx="120" cy="260" rx="40" ry="7" fill="#c46d4c" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 120,260 Q 115,220 120,180" stroke="#1f2421" stroke-width="3" fill="none"/>
-          <path d="M 118,240 C 80,240 70,205 105,210 C 118,220 118,235 118,240 Z" fill="#2c5e53" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 120,225 C 160,220 165,190 130,195 C 120,205 120,220 120,225 Z" fill="#204840" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 119,210 C 75,195 70,165 108,175 C 119,185 119,200 119,210 Z" fill="#3a7568" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 120,195 C 160,180 155,150 125,165 C 118,175 120,190 120,195 Z" fill="#2c5e53" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 120,180 C 100,140 135,130 132,165 C 128,175 122,178 120,180 Z" fill="#4d8b7d" stroke="#1f2421" stroke-width="2"/>
-        </g>
+          <linearGradient id="terracota-oscura" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#883b23"/>
+            <stop offset="50%" stop-color="#bd5335"/>
+            <stop offset="100%" stop-color="#6e2c17"/>
+          </linearGradient>
 
-        <!-- 2. MACETA MINI PEQUEÑA -->
-        <g id="maceta-2-mini">
-          <ellipse cx="150" cy="359" rx="20" ry="3" fill="#b86141" stroke="#1f2421" stroke-width="1.8"/>
-          <path d="M 132,300 L 168,300 L 162,358 L 138,358 Z" fill="#cf7a58" stroke="#1f2421" stroke-width="2" stroke-linejoin="round"/>
-          <ellipse cx="150" cy="300" rx="18" ry="4" fill="#a85335" stroke="#1f2421" stroke-width="1.8"/>
-          <path d="M 150,300 Q 152,280 150,265" stroke="#1f2421" stroke-width="2" fill="none"/>
-          <ellipse cx="145" cy="285" rx="5" ry="3" fill="#204840" stroke="#1f2421" stroke-width="1.5" transform="rotate(-20 145 285)"/>
-          <ellipse cx="155" cy="275" rx="5" ry="3" fill="#3a7568" stroke="#1f2421" stroke-width="1.5" transform="rotate(20 155 275)"/>
-          <ellipse cx="150" cy="263" rx="6" ry="4" fill="#4d8b7d" stroke="#1f2421" stroke-width="1.5"/>
-        </g>
+          <linearGradient id="maceta-amarilla" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#d4aa37"/>
+            <stop offset="40%" stop-color="#f5e082"/>
+            <stop offset="100%" stop-color="#b88f28"/>
+          </linearGradient>
 
-        <!-- 3. MACETA AMARILLA CILÍNDRICA CON FRANJA CELESTE -->
-        <g id="maceta-3-amarilla">
-          <path d="M 172,275 L 258,275 L 252,358 L 178,358 Z" fill="#ebd07b" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M 174,300 L 256,300 L 254,330 L 176,330 Z" fill="#a4bece" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 215,275 L 180,220 L 205,275 Z" fill="#1b4332" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 215,275 L 195,190 L 218,275 Z" fill="#2d6a4f" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 215,275 L 215,160 L 228,275 Z" fill="#40916c" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 215,275 L 235,185 L 238,275 Z" fill="#52b788" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 215,275 L 255,215 L 245,275 Z" fill="#74c69d" stroke="#1f2421" stroke-width="2"/>
-        </g>
+          <linearGradient id="maceta-rosada" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#d97d66"/>
+            <stop offset="50%" stop-color="#f8a995"/>
+            <stop offset="100%" stop-color="#b85f49"/>
+          </linearGradient>
 
-        <!-- 4. MACETA CENTRAL GRANDE (SANSEVIERIA / LENGUA DE SUEGRA) -->
-        <g id="maceta-4-sansevieria">
-          <ellipse cx="305" cy="358" rx="72" ry="7" fill="#b86141" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 225,230 L 385,230 L 370,352 L 240,352 Z" fill="#d87352" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
-          <ellipse cx="305" cy="230" rx="80" ry="10" fill="#be5d3c" stroke="#1f2421" stroke-width="2.2"/>
+          <linearGradient id="sustrato-tierra" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2d1c10"/>
+            <stop offset="100%" stop-color="#4a301e"/>
+          </linearGradient>
 
-          <!-- Hojas de Sansevieria con sus bordes amarillos -->
-          <path d="M 245,230 Q 180,180 200,130 Q 230,170 260,230 Z" fill="#52796f" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 200,130 Q 230,170 260,230" fill="none" stroke="#ffe599" stroke-width="2.5"/>
+          <radialGradient id="sombra-base" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="rgba(31,36,33,0.35)"/>
+            <stop offset="100%" stop-color="rgba(31,36,33,0)"/>
+          </radialGradient>
+        </defs>
 
-          <path d="M 270,230 Q 210,130 225,50 Q 260,110 285,230 Z" fill="#354f52" stroke="#1f2421" stroke-width="2.2"/>
-          <path d="M 225,50 Q 210,130 270,230" fill="none" stroke="#ffe599" stroke-width="3"/>
+        <!-- Superficie / Estante de Madera -->
+        <rect x="10" y="358" width="580" height="8" rx="3" fill="#3e2723" stroke="#1f2421" stroke-width="2"/>
+        <line x1="10" y1="358" x2="590" y2="358" stroke="#1f2421" stroke-width="2"/>
 
-          <path d="M 285,230 Q 280,100 295,20 Q 320,80 315,230 Z" fill="#84a98c" stroke="#1f2421" stroke-width="2.5"/>
-          <path d="M 295,20 Q 280,100 285,230" fill="none" stroke="#f6d55c" stroke-width="3.5"/>
-          <path d="M 295,20 Q 320,80 315,230" fill="none" stroke="#f6d55c" stroke-width="2"/>
+        <!-- Sombras proyectadas bajo las macetas -->
+        <ellipse cx="115" cy="358" rx="48" ry="6" fill="url(#sombra-base)"/>
+        <ellipse cx="215" cy="358" rx="42" ry="5" fill="url(#sombra-base)"/>
+        <ellipse cx="320" cy="358" rx="85" ry="8" fill="url(#sombra-base)"/>
+        <ellipse cx="445" cy="358" rx="55" ry="7" fill="url(#sombra-base)"/>
+        <ellipse cx="525" cy="358" rx="32" ry="5" fill="url(#sombra-base)"/>
 
-          <path d="M 310,230 Q 350,110 335,45 Q 320,120 295,230 Z" fill="#52796f" stroke="#1f2421" stroke-width="2.2"/>
-          <path d="M 335,45 Q 350,110 310,230" fill="none" stroke="#f6d55c" stroke-width="3"/>
-
-          <path d="M 320,230 Q 380,160 360,110 Q 340,160 300,230 Z" fill="#2f3e46" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 360,110 Q 380,160 320,230" fill="none" stroke="#ffe599" stroke-width="2.5"/>
-        </g>
-
-        <!-- 5. MACETA DERECHA MEDIANA (POTOS / COLGANTE) -->
-        <g id="maceta-5-potos">
-          <ellipse cx="420" cy="358" rx="50" ry="6" fill="#b86141" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 360,240 L 480,240 L 460,352 L 380,352 Z" fill="#df825f" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
-          <ellipse cx="420" cy="240" rx="60" ry="8" fill="#c46d4c" stroke="#1f2421" stroke-width="2"/>
-
-          <path d="M 380,245 Q 330,260 310,310 Q 340,330 360,300" stroke="#1f2421" stroke-width="2" fill="none"/>
-          <path d="M 310,310 C 290,300 295,330 315,325 C 325,320 320,312 310,310 Z" fill="#52b788" stroke="#1f2421" stroke-width="1.8"/>
-          <path d="M 335,275 C 315,265 318,290 338,288 Z" fill="#74c69d" stroke="#1f2421" stroke-width="1.8"/>
-
-          <path d="M 410,240 C 370,220 365,180 400,190 C 420,200 415,230 410,240 Z" fill="#2d6a4f" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 430,240 C 400,200 410,150 445,170 C 460,195 440,230 430,240 Z" fill="#40916c" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 450,240 C 440,190 480,160 490,200 C 485,220 460,235 450,240 Z" fill="#52b788" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 465,240 C 470,210 520,200 505,230 C 490,245 475,242 465,240 Z" fill="#74c69d" stroke="#1f2421" stroke-width="2"/>
-        </g>
-
-        <!-- 6. MACETA ROSADA CON ONDAS -->
-        <g id="maceta-6-rosada">
-          <ellipse cx="490" cy="358" rx="28" ry="4" fill="#d87352" stroke="#1f2421" stroke-width="1.8"/>
-          <path d="M 460,265 L 520,265 L 512,354 L 468,354 Z" fill="#f4a261" stroke="#1f2421" stroke-width="2.2" stroke-linejoin="round"/>
-          <path d="M 462,290 Q 490,300 518,290" fill="none" stroke="#e76f51" stroke-width="2.5"/>
-          <path d="M 465,315 Q 490,325 515,315" fill="none" stroke="#e76f51" stroke-width="2.5"/>
+        <!-- 1. FICUS LYRATA (Maceta Terracota Alta Izquierda) -->
+        <g id="ficus-lyrata">
+          <!-- Plato base -->
+          <ellipse cx="115" cy="355" rx="38" ry="6" fill="#8a3a22" stroke="#1f2421" stroke-width="2"/>
+          <!-- Maceta Cónica -->
+          <path d="M 72,255 L 158,255 L 146,352 L 84,352 Z" fill="url(#terracota-3d)" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Borde / Rim Superior -->
+          <ellipse cx="115" cy="255" rx="43" ry="8" fill="url(#terracota-oscura)" stroke="#1f2421" stroke-width="2"/>
+          <!-- Tierra / Sustrato -->
+          <ellipse cx="115" cy="255" rx="39" ry="6" fill="url(#sustrato-tierra)"/>
           
-          <path d="M 480,265 C 530,250 560,300 480,345" fill="none" stroke="#1f2421" stroke-width="2"/>
-          <path d="M 525,268 C 540,255 550,275 530,280 Z" fill="#52b788" stroke="#1f2421" stroke-width="1.5"/>
-          <path d="M 520,305 C 545,300 540,325 515,320 Z" fill="#74c69d" stroke="#1f2421" stroke-width="1.5"/>
-          <path d="M 480,345 C 465,335 480,320 492,332 Z" fill="#95d5b2" stroke="#1f2421" stroke-width="1.5"/>
+          <!-- Tallo leñoso -->
+          <path d="M 115,255 Q 112,200 118,140" stroke="#2b1a0e" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M 115,255 Q 112,200 118,140" stroke="#1f2421" stroke-width="2" fill="none"/>
+
+          <!-- Hojas estilo Ficus con nervaduras -->
+          <!-- Hoja Inferior Izquierda -->
+          <path d="M 114,235 C 65,230 55,190 98,198 C 112,205 114,228 114,235 Z" fill="#225346" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 114,235 C 92,220 80,210 98,198" stroke="#71b399" stroke-width="1.5" fill="none"/>
+
+          <!-- Hoja Inferior Derecha -->
+          <path d="M 116,215 C 160,210 168,175 128,182 C 116,192 116,210 116,215 Z" fill="#1b4338" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 116,215 C 136,200 148,190 128,182" stroke="#529980" stroke-width="1.5" fill="none"/>
+
+          <!-- Hoja Media Izquierda -->
+          <path d="M 116,190 C 60,175 62,140 102,150 C 114,162 116,182 116,190 Z" fill="#2d6a59" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 116,190 C 90,172 80,160 102,150" stroke="#88caa8" stroke-width="1.5" fill="none"/>
+
+          <!-- Hoja Media Derecha -->
+          <path d="M 117,170 C 162,155 158,125 122,138 C 115,148 117,162 117,170 Z" fill="#225346" stroke="#1f2421" stroke-width="2"/>
+          
+          <!-- Hoja Superior Cima -->
+          <path d="M 118,140 C 95,95 138,88 132,125 C 128,135 120,138 118,140 Z" fill="#3a806c" stroke="#1f2421" stroke-width="2"/>
+        </g>
+
+        <!-- 2. SUCULENTA EN MACETA AMARILLA -->
+        <g id="suculenta-aloe">
+          <path d="M 178,270 L 252,270 L 245,354 L 185,354 Z" fill="url(#maceta-amarilla)" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
+          <ellipse cx="215" cy="270" rx="37" ry="6" fill="#9e7a1b" stroke="#1f2421" stroke-width="2"/>
+          <ellipse cx="215" cy="270" rx="33" ry="4.5" fill="url(#sustrato-tierra)"/>
+
+          <!-- Franja decorativa celeste azulejo con sombra -->
+          <path d="M 180,295 L 250,295 L 248,322 L 182,322 Z" fill="#84a9c0" stroke="#1f2421" stroke-width="2"/>
+          <line x1="181" y1="295" x2="250" y2="295" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+
+          <!-- Pencas tridimensionales de Aloe / Haworthia -->
+          <path d="M 215,270 L 175,205 L 202,270 Z" fill="#1e4d3b" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 215,270 L 192,175 L 214,270 Z" fill="#2d6a52" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 215,270 L 215,150 L 226,270 Z" fill="#40916c" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 215,270 L 238,170 L 237,270 Z" fill="#52b788" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 215,270 L 258,200 L 244,270 Z" fill="#74c69d" stroke="#1f2421" stroke-width="2"/>
+
+          <!-- Puntos característicos de Haworthia -->
+          <circle cx="215" cy="180" r="1.5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="215" cy="200" r="1.5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="214" cy="220" r="1.5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="200" cy="210" r="1.5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="230" cy="205" r="1.5" fill="#ffffff" opacity="0.9"/>
+        </g>
+
+        <!-- 3. SANSEVIERIA / LENGUA DE SUEGRA (Maceta Terracota Grande Central) -->
+        <g id="sansevieria-central">
+          <!-- Plato base -->
+          <ellipse cx="320" cy="355" rx="72" ry="8" fill="#6e2c17" stroke="#1f2421" stroke-width="2"/>
+          <!-- Cuerpo de la Maceta -->
+          <path d="M 238,225 L 402,225 L 385,350 L 255,350 Z" fill="url(#terracota-3d)" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Borde ancho de Maceta -->
+          <ellipse cx="320" cy="225" rx="82" ry="12" fill="url(#terracota-oscura)" stroke="#1f2421" stroke-width="2.5"/>
+          <!-- Interior con sustrato -->
+          <ellipse cx="320" cy="225" rx="74" ry="9" fill="url(#sustrato-tierra)"/>
+
+          <!-- Hojas Espadas de Sansevieria con franjas atigradas -->
+          <!-- Hoja 1 (Izquierda inclinada) -->
+          <path d="M 260,225 Q 190,170 210,110 Q 245,150 275,225 Z" fill="#2d4a3e" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 210,110 Q 245,150 275,225" fill="none" stroke="#f3d563" stroke-width="3"/>
+
+          <!-- Hoja 2 (Izquierda alta) -->
+          <path d="M 285,225 Q 220,120 238,35 Q 275,95 302,225 Z" fill="#1b382b" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 238,35 Q 220,120 285,225" fill="none" stroke="#f3d563" stroke-width="3.5"/>
+          <!-- Marcas atigradas -->
+          <path d="M 255,90 Q 268,93 278,88" stroke="#487a64" stroke-width="2" fill="none"/>
+          <path d="M 265,130 Q 278,133 288,128" stroke="#487a64" stroke-width="2" fill="none"/>
+
+          <!-- Hoja 3 (CENTRAL ALTA PRINCIPAL) -->
+          <path d="M 302,225 Q 295,90 310,12 Q 338,75 332,225 Z" fill="#386350" stroke="#1f2421" stroke-width="2.5"/>
+          <!-- Bordes amarillos vivos -->
+          <path d="M 310,12 Q 295,90 302,225" fill="none" stroke="#ffd13b" stroke-width="4"/>
+          <path d="M 310,12 Q 338,75 332,225" fill="none" stroke="#ffd13b" stroke-width="2.5"/>
+          <!-- Patrón veteado horizontal -->
+          <path d="M 305,60 Q 320,63 328,58" stroke="#1b382b" stroke-width="2.5" fill="none"/>
+          <path d="M 303,100 Q 320,103 330,98" stroke="#1b382b" stroke-width="2.5" fill="none"/>
+          <path d="M 303,140 Q 320,143 331,138" stroke="#1b382b" stroke-width="2.5" fill="none"/>
+          <path d="M 304,180 Q 320,183 331,178" stroke="#1b382b" stroke-width="2.5" fill="none"/>
+
+          <!-- Hoja 4 (Derecha alta) -->
+          <path d="M 328,225 Q 370,100 352,38 Q 335,110 312,225 Z" fill="#2d4a3e" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 352,38 Q 370,100 328,225" fill="none" stroke="#ffd13b" stroke-width="3.5"/>
+
+          <!-- Hoja 5 (Derecha baja caída) -->
+          <path d="M 335,225 Q 398,150 378,100 Q 355,148 318,225 Z" fill="#1b382b" stroke="#1f2421" stroke-width="2"/>
+          <path d="M 378,100 Q 398,150 335,225" fill="none" stroke="#f3d563" stroke-width="3"/>
+        </g>
+
+        <!-- 4. MONSTERA DELICIOSA (Maceta Terracota Mediana Derecha) -->
+        <g id="monstera">
+          <!-- Plato -->
+          <ellipse cx="445" cy="355" rx="46" ry="6" fill="#6e2c17" stroke="#1f2421" stroke-width="2"/>
+          <!-- Maceta Cónica -->
+          <path d="M 390,238 L 500,238 L 482,352 L 408,352 Z" fill="url(#terracota-3d)" stroke="#1f2421" stroke-width="2.5" stroke-linejoin="round"/>
+          <ellipse cx="445" cy="238" rx="55" ry="8" fill="url(#terracota-oscura)" stroke="#1f2421" stroke-width="2"/>
+          <ellipse cx="445" cy="238" rx="49" ry="6" fill="url(#sustrato-tierra)"/>
+
+          <!-- Rama y Hoja Monstera Colgante Izquierda con Fenestración -->
+          <path d="M 425,240 Q 360,250 330,300" stroke="#1f2421" stroke-width="2.5" fill="none"/>
+          <path d="M 330,300 C 305,280 305,335 340,325 C 360,320 350,300 330,300 Z" fill="#2d6a4f" stroke="#1f2421" stroke-width="2"/>
+          <!-- Corte de hoja (Fenestración) -->
+          <ellipse cx="325" cy="312" rx="3" ry="7" transform="rotate(-30 325 312)" fill="#fdfbf7" stroke="#1f2421" stroke-width="1.2"/>
+
+          <!-- Hoja Monstera Grande Superior 1 -->
+          <path d="M 435,238 C 385,210 380,150 425,160 C 450,170 445,225 435,238 Z" fill="#1b4332" stroke="#1f2421" stroke-width="2"/>
+          <ellipse cx="405" cy="180" rx="4" ry="10" transform="rotate(-40 405 180)" fill="#fdfbf7" stroke="#1f2421" stroke-width="1.2"/>
+          <ellipse cx="418" cy="170" rx="3" ry="8" transform="rotate(-30 418 170)" fill="#fdfbf7" stroke="#1f2421" stroke-width="1.2"/>
+
+          <!-- Hoja Monstera Superior 2 (Más clara) -->
+          <path d="M 455,238 C 430,185 450,130 488,155 C 505,185 470,228 455,238 Z" fill="#40916c" stroke="#1f2421" stroke-width="2"/>
+          <ellipse cx="470" cy="165" rx="4" ry="11" transform="rotate(25 470 165)" fill="#fdfbf7" stroke="#1f2421" stroke-width="1.2"/>
+          <ellipse cx="458" cy="180" rx="3" ry="8" transform="rotate(15 458 180)" fill="#fdfbf7" stroke="#1f2421" stroke-width="1.2"/>
+
+          <!-- Hoja Derecha Abundante -->
+          <path d="M 470,238 C 485,200 535,185 520,225 C 505,245 480,242 470,238 Z" fill="#52b788" stroke="#1f2421" stroke-width="2"/>
+        </g>
+
+        <!-- 5. POTOS COLGANTE (Maceta Pastel Rosada Extremo Derecho) -->
+        <g id="potos-rosado">
+          <path d="M 500,265 L 552,265 L 544,354 L 508,354 Z" fill="url(#maceta-rosada)" stroke="#1f2421" stroke-width="2" stroke-linejoin="round"/>
+          <ellipse cx="526" cy="265" rx="26" ry="5" fill="#a8533e" stroke="#1f2421" stroke-width="1.8"/>
+          <ellipse cx="526" cy="265" rx="22" ry="3.5" fill="url(#sustrato-tierra)"/>
+
+          <!-- Relieve acanalado moderno en maceta -->
+          <path d="M 502,290 Q 526,298 550,290" fill="none" stroke="#b85f49" stroke-width="2"/>
+          <path d="M 505,315 Q 526,323 547,315" fill="none" stroke="#b85f49" stroke-width="2"/>
+
+          <!-- Enredadera cayendo en cascada -->
+          <path d="M 520,265 C 565,260 580,310 515,348" fill="none" stroke="#1f2421" stroke-width="2"/>
+          <!-- Hojas de Potos Variegadas (Corazón) -->
+          <path d="M 545,270 C 560,258 572,278 550,282 Z" fill="#74c69d" stroke="#1f2421" stroke-width="1.5"/>
+          <path d="M 548,272 C 558,264 565,276 552,280 Z" fill="#b7efc5"/> <!-- Mancha variegada -->
+
+          <path d="M 540,305 C 562,300 558,328 535,322 Z" fill="#52b788" stroke="#1f2421" stroke-width="1.5"/>
+          <path d="M 515,348 C 498,338 512,320 526,334 Z" fill="#95d5b2" stroke="#1f2421" stroke-width="1.5"/>
         </g>
       </svg>
     </section>

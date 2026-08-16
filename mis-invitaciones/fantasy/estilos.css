@@ -29,14 +29,27 @@ h1 {
   overflow: visible;
 }
 
-/* Colores y eje de rotación de las alas */
-.ala {
-  fill: #c77dff;
-  transform-box: fill-box; /* Fuerza a usar el centro de la propia ala */
-  transform-origin: right bottom; /* Hace que el aleteo rote desde la articulación */
+/* Eje de rotación para las alas */
+.grupo-ala {
+  transform-box: fill-box;
+  transform-origin: right bottom;
 }
 
-/* Animación 2: Batido de alas */
+/* Animación: Cuerpo flotando */
+.dragon-cuerpo-grupo {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animación: Aleteo */
 .ala-derecha {
   animation: aleteoDerecho 0.8s ease-in-out infinite alternate;
 }
@@ -47,26 +60,26 @@ h1 {
 
 @keyframes aleteoDerecho {
   0% {
-    transform: rotate(0deg) scaleY(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-25deg) scaleY(0.6);
+    transform: rotate(-20deg) scaleY(0.7);
   }
 }
 
 @keyframes aleteoIzquierdo {
   0% {
-    transform: rotate(0deg) scaleY(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(20deg) scaleY(0.7);
+    transform: rotate(15deg) scaleY(0.8);
   }
 }
 
-/* Animación 3: La sombra en el suelo */
+/* Animación: Sombra */
 .sombra {
   fill: rgba(0, 0, 0, 0.4);
-  transform-box: fill-box; /* Mantiene la sombra fija en su posición */
+  transform-box: fill-box;
   transform-origin: center;
   animation: encogerSombra 3s ease-in-out infinite;
 }
@@ -78,6 +91,6 @@ h1 {
   }
   50% {
     transform: scale(0.6);
-    opacity: 0.15;
+    opacity: 0.2;
   }
 }

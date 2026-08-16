@@ -1,1 +1,13 @@
+.jardin-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: #f0fdf4; /* Fondo verde suave */
+}
 
+.img-plantas {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}

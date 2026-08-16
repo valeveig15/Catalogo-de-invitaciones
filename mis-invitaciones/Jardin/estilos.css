@@ -1,8 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0fdf4;
+  font-family: sans-serif;
+}
+
 .jardin-container {
   position: relative;
   width: 100%;
   text-align: center;
-  background-color: #f0fdf4; /* Fondo verde suave */
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .img-plantas {

@@ -10,10 +10,33 @@
 
   <div class="fantasy-container">
     <h1>Una Aventura Te Espera</h1>
-    
-    <!-- Contenedor del dragón animado -->
-    <div class="dragon-area">
-      <img src="imagenes/dragon.png" alt="Dragón volando" class="dragon-volador">
+
+    <!-- DRAGÓN HECHO 100% EN CÓDIGO SVG -->
+    <div class="dragon-wrapper">
+      <svg class="dragon-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sombra en el suelo -->
+        <ellipse cx="150" cy="180" rx="60" ry="10" class="sombra" />
+
+        <!-- Grupo del Dragón (Vuelo completo) -->
+        <g class="dragon-cuerpo-grupo">
+          <!-- Ala Izquierda/Trasera -->
+          <path d="M 130 90 Q 70 30 40 70 Q 90 90 130 100 Z" class="ala ala-izquierda" />
+          
+          <!-- Cola con fuego/espina -->
+          <path d="M 190 110 Q 230 130 250 110 Q 220 100 180 100" fill="#9d4edd" />
+          
+          <!-- Cuerpo -->
+          <path d="M 110 100 Q 140 70 170 90 Q 190 110 160 125 Q 120 125 110 100 Z" fill="#7b2cbf" />
+
+          <!-- Cabeza -->
+          <path d="M 110 95 Q 90 85 80 95 Q 95 110 115 105 Z" fill="#9d4edd" />
+          <!-- Ojo brillante -->
+          <circle cx="92" cy="93" r="3" fill="#ffb703" />
+
+          <!-- Ala Derecha/Frontal -->
+          <path d="M 135 90 Q 80 10 30 50 Q 85 80 135 95 Z" class="ala ala-derecha" />
+        </g>
+      </svg>
     </div>
   </div>
 

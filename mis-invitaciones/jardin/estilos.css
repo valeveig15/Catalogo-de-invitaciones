@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0fdf4;
+  font-family: sans-serif;
+}
+
+.jardin-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.img-plantas {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}

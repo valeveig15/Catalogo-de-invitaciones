@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Invitaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+      padding: 50px 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .opciones {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .tarjeta {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 200px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .tarjeta:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Selecciona una Invitación</h1>
+
+  <div class="opciones">
+    <a href="jardin/index.html" class="tarjeta">
+      🌸 Temática Jardín
+    </a>
+    <a href="fantasy/index.html" class="tarjeta">
+      🐉 Temática Fantasy
+    </a>
+  </div>
+
+</body>
+</html>

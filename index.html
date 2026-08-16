@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Canvas Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <!-- Estilos Vinculados -->
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,9 @@
 
   <div class="horizontal-slider">
 
-    <!-- 1. VINTAGE / ELEGANTE -->
+    <!-- ==============================================================
+         1. VINTAGE / ELEGANTE (Camila Veiga)
+         ============================================================== -->
     <div class="card-wrapper theme-vintage" id="card1">
       <div class="start-screen" id="env1" style="background: radial-gradient(circle, #2d221e 0%, #15100e 100%);">
         <i class="fa-solid fa-envelope-open-text" style="font-size: 3.5rem; color: #d4a373; margin-bottom: 15px;"></i>
@@ -113,8 +115,11 @@
       </section>
     </div>
 
-    <!-- 2. ACUÁTICA / UNDER THE SEA -->
+    <!-- ==============================================================
+         2. ACUÁTICA / UNDER THE SEA (Marina Rios)
+         ============================================================== -->
     <div class="card-wrapper theme-aquatic" id="card2">
+      <!-- Burbujas continuas colocadas exclusivamente dentro del contenedor de la invitación acuática -->
       <div class="aquatic-bubbles">
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -124,6 +129,7 @@
         <div class="bubble"></div>
       </div>
 
+      <!-- INICIO MODIFICADO: Estilo Portal Submarino Océano Profundo -->
       <div class="start-screen" id="env2" style="background: radial-gradient(circle at center, #0a3d62 0%, #020b14 100%);">
         <div style="position: relative; margin-bottom: 20px;">
           <i class="fa-solid fa-water" style="font-size: 4rem; color: #90e0ef; filter: drop-shadow(0 0 20px #00b4d8);"></i>
@@ -210,13 +216,18 @@
       </section>
     </div>
 
-    <!-- 3. NEÓN & GLAM -->
+    <!-- ==============================================================
+         3. NEÓN & GLAM (Valentina Morales)
+         ============================================================== -->
     <div class="card-wrapper theme-neon" id="card3">
       <div class="start-screen" id="env3" style="background: radial-gradient(circle, #141824 0%, #08090d 100%);">
         <p style="letter-spacing: 3px; margin-bottom: 10px; color: #00f0ff; font-weight: 700;">NEON NIGHT FESTIVAL</p>
+        
+        <!-- Vinilo Neón Grande Interactivo -->
         <div class="vinyl-disc" onclick="openEnvelope('env3')">
           <div class="vinyl-center">MIS XV<br>VALENTINA</div>
         </div>
+        
         <p style="font-size: 0.9rem; margin-top: 15px; color: #ff007f; font-weight: 600; text-shadow: 0 0 10px #ff007f;">
           <i class="fa-solid fa-compact-disc"></i> TOCA EL VINILO PARA ENCENDER LA FIESTA
         </p>
@@ -296,28 +307,48 @@
       </section>
     </div>
 
-    <!-- 4. FLORAL / JARDÍN ENCANTADO -->
+    <!-- ==============================================================
+         4. FLORAL / JARDÍN ENCANTADO (Sofía Benítez)
+         ============================================================== -->
     <div class="card-wrapper theme-floral" id="card4">
+      <!-- MACETAS Y PLANTITAS REDISEÑADAS SEGÚN LA IMAGEN EN EL FONDO -->
       <div class="potted-plants-container">
         <svg class="potted-plants-svg" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Línea de base del suelo/estante -->
           <line x1="10" y1="185" x2="490" y2="185" stroke="#4a5d4e" stroke-width="2"/>
+          
+          <!-- Maceta 1 (Azul/Verde Pálido a la izquierda) -->
           <path d="M 50 145 L 60 185 L 90 185 L 100 145 Z" fill="#718879" stroke="#2d3a30" stroke-width="2"/>
+          <!-- Planta 1 -->
           <path d="M 55 145 C 40 120, 30 110, 45 95 C 60 110, 65 130, 75 145" fill="#425749" stroke="#1d2921" stroke-width="1.5"/>
           <path d="M 70 145 C 65 115, 75 90, 88 80 C 95 100, 85 130, 80 145" fill="#52695a" stroke="#1d2921" stroke-width="1.5"/>
+          
+          <!-- Maceta Pequeña 2 -->
           <path d="M 105 160 L 110 185 L 130 185 L 135 160 Z" fill="#bc8a5f" stroke="#2d3a30" stroke-width="2"/>
           <path d="M 115 160 Q 110 140 112 130 Q 120 145 122 160" stroke="#384a3c" stroke-width="3" fill="none"/>
+
+          <!-- Maceta 3 (Amarilla con verde en el centro) -->
           <path d="M 140 135 L 145 185 L 185 185 L 190 135 Z" fill="#ddb892" stroke="#2d3a30" stroke-width="2"/>
           <rect x="140" y="145" width="50" height="10" fill="#b08968"/>
+          <!-- Suculenta/Puntiaguda -->
           <path d="M 145 135 L 155 105 L 165 135 M 158 135 L 165 95 L 172 135 M 165 135 L 178 105 L 185 135" fill="#2d6a4f" stroke="#1b4332" stroke-width="1.5"/>
+
+          <!-- Maceta Principal Grande (Centro - Sansevieria/Lengua de suegra) -->
           <path d="M 200 115 L 210 185 L 270 185 L 280 115 Z" fill="#b06d48" stroke="#2d3a30" stroke-width="2"/>
           <ellipse cx="240" cy="115" rx="40" ry="8" fill="#8c502e"/>
+          <!-- Hojas alargadas -->
           <path d="M 215 115 C 205 70, 215 30, 225 20 C 235 40, 235 80, 235 115 Z" fill="#52796f" stroke="#cad2c5" stroke-width="2"/>
           <path d="M 230 115 C 230 60, 240 15, 250 10 C 260 30, 258 70, 255 115 Z" fill="#354f52" stroke="#cad2c5" stroke-width="2"/>
           <path d="M 250 115 C 255 65, 270 35, 280 25 C 285 50, 275 85, 270 115 Z" fill="#52796f" stroke="#cad2c5" stroke-width="2"/>
+
+          <!-- Maceta Colgante / Enredadera (Derecha centro) -->
           <path d="M 295 125 L 305 185 L 365 185 L 375 125 Z" fill="#c97c5d" stroke="#2d3a30" stroke-width="2"/>
+          <!-- Hojas cayendo -->
           <path d="M 280 140 Q 260 160 270 180 Q 285 160 295 135" fill="#40916c"/>
           <path d="M 310 125 C 300 150, 290 170, 315 190 C 330 165, 325 140, 320 125" fill="#52b788"/>
           <path d="M 350 125 Q 380 145 390 165 Q 365 155 355 125" fill="#2d6a4f"/>
+
+          <!-- Maceta Rosada Pequeña (Extremo derecho) -->
           <path d="M 390 140 L 398 185 L 432 185 L 440 140 Z" fill="#e0aaff" stroke="#2d3a30" stroke-width="2"/>
           <path d="M 395 140 C 380 120, 360 100, 385 85 C 410 110, 410 125, 415 140 Z" fill="#74c69d" stroke="#1b4332" stroke-width="1.5"/>
         </svg>
@@ -406,8 +437,11 @@
       </section>
     </div>
 
-    <!-- 5. FANTASY / REINO MÁGICO -->
+    <!-- ==============================================================
+         5. FANTASY / REINO MÁGICO (Ariadna Moon)
+         ============================================================== -->
     <div class="card-wrapper theme-fantasy" id="card5">
+      <!-- DRAGÓN REDISEÑADO CON ALAS ANCHAS Y DESPLEGADAS (ESTILO MODELO 3D) -->
       <svg class="flying-dragon" viewBox="0 0 240 180">
         <defs>
           <linearGradient id="dragonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -416,17 +450,26 @@
             <stop offset="100%" stop-color="#3c096c" />
           </linearGradient>
         </defs>
+        
+        <!-- Ala Izquierda Animada -->
         <g class="wing-left">
           <path fill="url(#dragonGradient)" opacity="0.85" d="M 110 50 C 80 10, 40 5, 5 35 C 25 55, 50 65, 75 70 C 90 65, 100 58, 110 50 Z"/>
           <path fill="none" stroke="#e0aaff" stroke-width="1.5" d="M 110 50 L 5 35 M 110 50 L 25 55 M 110 50 L 50 65 M 110 50 L 75 70"/>
         </g>
+
+        <!-- Ala Derecha Animada -->
         <g class="wing-right">
           <path fill="url(#dragonGradient)" opacity="0.85" d="M 110 50 C 140 10, 180 5, 215 35 C 195 55, 170 65, 145 70 C 130 65, 120 58, 110 50 Z"/>
           <path fill="none" stroke="#e0aaff" stroke-width="1.5" d="M 110 50 L 215 35 M 110 50 L 195 55 M 110 50 L 170 65 M 110 50 L 145 70"/>
         </g>
+
+        <!-- Cuerpo del Dragón (Vista Trasera / Vuelo Central) -->
+        <!-- Cola alargada -->
         <path fill="url(#dragonGradient)" d="M 106 70 Q 110 130 118 165 Q 120 170 125 175 Q 118 168 114 150 Q 108 120 104 70 Z"/>
+        <!-- Torso y Cabeza -->
         <ellipse cx="110" cy="55" rx="8" ry="20" fill="#e0aaff"/>
         <path fill="#e0aaff" d="M 106 38 L 110 20 L 114 38 Z"/>
+        <!-- Horns/Orejas -->
         <path fill="#c77dff" d="M 107 24 L 100 15 L 106 22 Z M 113 24 L 120 15 L 114 22 Z"/>
       </svg>
 
@@ -435,6 +478,7 @@
           <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 4rem; color: #e0aaff; filter: drop-shadow(0 0 25px #c77dff);"></i>
         </div>
         <h2 style="font-family: 'Cinzel Decorative', serif; font-size: 2.5rem; color: #e0aaff; text-shadow: 0 0 15px rgba(224, 170, 255, 0.8);">Ariadna Moon</h2>
+        <!-- TEXTO INICIO MODIFICADO PARA TEMÁTICA FANTASY -->
         <p style="letter-spacing: 3px; margin: 12px 0 25px; color: #c77dff; font-size: 0.85rem; font-weight: 600;">SE HA REVELADO LA PROFECÍA DE LOS 18 AÑOS</p>
         <button class="btn-start-custom" onclick="openEnvelope('env5')" style="background: linear-gradient(135deg, #7b2cbf, #5a189a); color: #e0aaff; border: 1px solid #e0aaff;">
           <i class="fa-solid fa-dragon"></i> ROMPER EL HECHIZO
@@ -515,7 +559,9 @@
       </section>
     </div>
 
-    <!-- TARJETAS DE UNA SOLA CARILLA -->
+    <!-- ==============================================================
+         6-10. INVITACIONES DE UNA SOLA CARILLA CON CONTEO REGRESIVO
+         ============================================================== -->
     <!-- OPCIÓN 1: PRINCESA ROSA ORO -->
     <div class="card-wrapper single-page">
       <div class="invitation-card style-rose-gold">
@@ -632,7 +678,7 @@
       </div>
     </div>
 
-    <!-- OPCIÓN 5: PARTY SUN & VIBES -->
+    <!-- OPCIÓN 5: PARTY SUN & VIBES (COLOR CAMBIADO A ESMERALDA & ORO) -->
     <div class="card-wrapper single-page">
       <div class="invitation-card style-tropical-pop">
         <div>
@@ -705,7 +751,7 @@
     </div>
   </div>
 
-  <!-- Script Lógico Vinculado -->
+  <!-- JAVASCRIPT LÓGICO -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,1 +1,30 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a0933; /* Fondo morado oscuro místico */
+  color: #e0d5f5;
+  font-family: 'Georgia', serif;
+}
+
+.fantasy-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #ffb703; /* Dorado fantástico */
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.5);
+  font-size: 2.5rem;
+}
+
+.img-dragon {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto 0 auto;
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4)); /* Brillito místico alrededor del dragón */
+}

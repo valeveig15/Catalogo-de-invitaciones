@@ -311,46 +311,107 @@
          4. FLORAL / JARDÍN ENCANTADO (Sofía Benítez)
          ============================================================== -->
     <div class="card-wrapper theme-floral" id="card4">
-      <!-- MACETAS Y PLANTITAS REDISEÑADAS SEGÚN LA IMAGEN EN EL FONDO -->
+      <!-- JARDÍN DE PLANTAS EN MACETAS -->
       <div class="potted-plants-container">
-        <svg class="potted-plants-svg" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Línea de base del suelo/estante -->
-          <line x1="10" y1="185" x2="490" y2="185" stroke="#4a5d4e" stroke-width="2"/>
-          
-          <!-- Maceta 1 (Azul/Verde Pálido a la izquierda) -->
-          <path d="M 50 145 L 60 185 L 90 185 L 100 145 Z" fill="#718879" stroke="#2d3a30" stroke-width="2"/>
-          <!-- Planta 1 -->
-          <path d="M 55 145 C 40 120, 30 110, 45 95 C 60 110, 65 130, 75 145" fill="#425749" stroke="#1d2921" stroke-width="1.5"/>
-          <path d="M 70 145 C 65 115, 75 90, 88 80 C 95 100, 85 130, 80 145" fill="#52695a" stroke="#1d2921" stroke-width="1.5"/>
-          
-          <!-- Maceta Pequeña 2 -->
-          <path d="M 105 160 L 110 185 L 130 185 L 135 160 Z" fill="#bc8a5f" stroke="#2d3a30" stroke-width="2"/>
-          <path d="M 115 160 Q 110 140 112 130 Q 120 145 122 160" stroke="#384a3c" stroke-width="3" fill="none"/>
+        <svg class="potted-plants-svg" viewBox="0 0 650 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="terracotta" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d99a6c"/>
+              <stop offset="55%" stop-color="#b86b45"/>
+              <stop offset="100%" stop-color="#7d402b"/>
+            </linearGradient>
+            <linearGradient id="greenPot" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#9bb6a2"/>
+              <stop offset="55%" stop-color="#607d6a"/>
+              <stop offset="100%" stop-color="#354f40"/>
+            </linearGradient>
+            <linearGradient id="creamPot" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f1e3c7"/>
+              <stop offset="60%" stop-color="#c9aa7c"/>
+              <stop offset="100%" stop-color="#8f704d"/>
+            </linearGradient>
+            <linearGradient id="leafGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#95d5b2"/>
+              <stop offset="45%" stop-color="#40916c"/>
+              <stop offset="100%" stop-color="#1b4332"/>
+            </linearGradient>
+            <linearGradient id="darkLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#74c69d"/>
+              <stop offset="100%" stop-color="#183b2a"/>
+            </linearGradient>
+          </defs>
 
-          <!-- Maceta 3 (Amarilla con verde en el centro) -->
-          <path d="M 140 135 L 145 185 L 185 185 L 190 135 Z" fill="#ddb892" stroke="#2d3a30" stroke-width="2"/>
-          <rect x="140" y="145" width="50" height="10" fill="#b08968"/>
-          <!-- Suculenta/Puntiaguda -->
-          <path d="M 145 135 L 155 105 L 165 135 M 158 135 L 165 95 L 172 135 M 165 135 L 178 105 L 185 135" fill="#2d6a4f" stroke="#1b4332" stroke-width="1.5"/>
+          <ellipse cx="325" cy="222" rx="300" ry="9" fill="#000000" opacity="0.3"/>
 
-          <!-- Maceta Principal Grande (Centro - Sansevieria/Lengua de suegra) -->
-          <path d="M 200 115 L 210 185 L 270 185 L 280 115 Z" fill="#b06d48" stroke="#2d3a30" stroke-width="2"/>
-          <ellipse cx="240" cy="115" rx="40" ry="8" fill="#8c502e"/>
-          <!-- Hojas alargadas -->
-          <path d="M 215 115 C 205 70, 215 30, 225 20 C 235 40, 235 80, 235 115 Z" fill="#52796f" stroke="#cad2c5" stroke-width="2"/>
-          <path d="M 230 115 C 230 60, 240 15, 250 10 C 260 30, 258 70, 255 115 Z" fill="#354f52" stroke="#cad2c5" stroke-width="2"/>
-          <path d="M 250 115 C 255 65, 270 35, 280 25 C 285 50, 275 85, 270 115 Z" fill="#52796f" stroke="#cad2c5" stroke-width="2"/>
+          <!-- Planta tropical -->
+          <g transform="translate(12 0)">
+            <g class="plant-sway slow">
+              <path d="M100 180 Q93 132 73 87" fill="none" stroke="#476a50" stroke-width="5" stroke-linecap="round"/>
+              <path d="M101 180 Q108 124 134 73" fill="none" stroke="#476a50" stroke-width="5" stroke-linecap="round"/>
+              <path d="M100 180 Q100 111 102 52" fill="none" stroke="#52795d" stroke-width="5" stroke-linecap="round"/>
+              <path d="M76 92 C45 91,32 69,39 49 C50 23,83 29,100 55 C92 58,86 63,84 72 C80 64,70 60,61 62 C71 71,77 80,76 92 Z" fill="url(#leafGreen)" stroke="#193b2a" stroke-width="2"/>
+              <path d="M77 90 Q72 63 53 46" fill="none" stroke="#b7e4c7" stroke-opacity="0.5" stroke-width="2"/>
+              <path d="M102 57 C84 39,86 14,101 5 C119 14,125 38,108 59 C109 44,105 30,101 18 C98 32,97 45,102 57 Z" fill="url(#darkLeaf)" stroke="#193b2a" stroke-width="2"/>
+              <path d="M132 77 C137 48,160 35,180 45 C187 65,173 90,142 97 C149 86,157 77,168 69 C154 71,143 75,132 77 Z" fill="url(#leafGreen)" stroke="#193b2a" stroke-width="2"/>
+              <path d="M138 88 Q151 68 174 54" fill="none" stroke="#b7e4c7" stroke-opacity="0.5" stroke-width="2"/>
+            </g>
+            <ellipse cx="101" cy="174" rx="49" ry="10" fill="#3c2a20"/>
+            <rect x="48" y="168" width="106" height="20" rx="7" fill="#ce8259" stroke="#673f2f" stroke-width="2"/>
+            <path d="M55 186 L67 220 Q101 228 135 220 L147 186 Z" fill="url(#terracotta)" stroke="#673f2f" stroke-width="2.5"/>
+            <path d="M70 190 L78 216" stroke="#f2b58d" stroke-width="4" stroke-linecap="round" opacity="0.45"/>
+          </g>
 
-          <!-- Maceta Colgante / Enredadera (Derecha centro) -->
-          <path d="M 295 125 L 305 185 L 365 185 L 375 125 Z" fill="#c97c5d" stroke="#2d3a30" stroke-width="2"/>
-          <!-- Hojas cayendo -->
-          <path d="M 280 140 Q 260 160 270 180 Q 285 160 295 135" fill="#40916c"/>
-          <path d="M 310 125 C 300 150, 290 170, 315 190 C 330 165, 325 140, 320 125" fill="#52b788"/>
-          <path d="M 350 125 Q 380 145 390 165 Q 365 155 355 125" fill="#2d6a4f"/>
+          <!-- Suculenta -->
+          <g transform="translate(165 20)">
+            <g class="plant-sway fast">
+              <path d="M71 173 C45 157 43 132 67 139 C61 113 81 103 86 137 C97 108 118 119 101 143 C127 136 135 157 105 170 Z" fill="#74c69d" stroke="#2d6a4f" stroke-width="2"/>
+              <path d="M80 167 C67 147 76 126 87 146 C89 126 106 126 100 151 C115 144 122 158 104 170 Z" fill="#40916c" stroke="#1b4332" stroke-width="1.8"/>
+            </g>
+            <ellipse cx="87" cy="171" rx="38" ry="8" fill="#382d22"/>
+            <rect x="46" y="166" width="82" height="16" rx="6" fill="#e3cfac" stroke="#715e42" stroke-width="2"/>
+            <path d="M51 181 L60 215 Q87 222 114 215 L123 181 Z" fill="url(#creamPot)" stroke="#715e42" stroke-width="2"/>
+          </g>
 
-          <!-- Maceta Rosada Pequeña (Extremo derecho) -->
-          <path d="M 390 140 L 398 185 L 432 185 L 440 140 Z" fill="#e0aaff" stroke="#2d3a30" stroke-width="2"/>
-          <path d="M 395 140 C 380 120, 360 100, 385 85 C 410 110, 410 125, 415 140 Z" fill="#74c69d" stroke="#1b4332" stroke-width="1.5"/>
+          <!-- Sansevieria central -->
+          <g transform="translate(260 -3)">
+            <g class="plant-sway">
+              <path d="M66 176 C54 126 57 58 75 15 C90 58 84 119 82 177 Z" fill="#52796f" stroke="#b7d8a7" stroke-width="2.5"/>
+              <path d="M80 178 C76 111 87 48 106 7 C120 65 104 125 98 178 Z" fill="#354f52" stroke="#cad2c5" stroke-width="2.5"/>
+              <path d="M94 178 C104 112 122 62 143 34 C146 85 126 135 110 179 Z" fill="#52796f" stroke="#b7d8a7" stroke-width="2.5"/>
+              <path d="M60 178 C47 137 39 96 48 67 C70 96 72 136 73 178 Z" fill="#2f5d50" stroke="#9fc89b" stroke-width="2"/>
+              <path d="M102 178 C126 128 148 99 166 87 C157 130 135 159 117 181 Z" fill="#3d7058" stroke="#9fc89b" stroke-width="2"/>
+              <path d="M74 165 Q72 95 75 27" fill="none" stroke="#d8f3dc" stroke-opacity="0.45" stroke-width="2"/>
+              <path d="M96 166 Q104 85 106 22" fill="none" stroke="#d8f3dc" stroke-opacity="0.4" stroke-width="2"/>
+            </g>
+            <ellipse cx="94" cy="174" rx="58" ry="11" fill="#33251e"/>
+            <rect x="31" y="167" width="126" height="22" rx="8" fill="#718879" stroke="#34483b" stroke-width="2.5"/>
+            <path d="M38 187 L50 222 Q94 231 138 222 L150 187 Z" fill="url(#greenPot)" stroke="#34483b" stroke-width="2.5"/>
+            <path d="M53 192 L61 216" fill="none" stroke="#c9d6cc" stroke-width="5" opacity="0.28" stroke-linecap="round"/>
+          </g>
+
+          <!-- Pothos / enredadera -->
+          <g transform="translate(440 15)">
+            <g class="plant-sway slow">
+              <path d="M80 172 Q63 143 54 114 Q44 86 24 63" fill="none" stroke="#4a7257" stroke-width="4" stroke-linecap="round"/>
+              <path d="M89 172 Q111 140 127 106 Q140 80 158 68" fill="none" stroke="#4a7257" stroke-width="4" stroke-linecap="round"/>
+              <path d="M43 111 C15 111,11 88,31 79 C51 80,59 95,43 111 Z" fill="url(#leafGreen)" stroke="#1b4332" stroke-width="1.8"/>
+              <path d="M27 70 C4 63,7 42,29 42 C47 52,45 67,27 70 Z" fill="#52b788" stroke="#1b4332" stroke-width="1.8"/>
+              <path d="M121 116 C145 99,159 116,146 134 C128 140,115 132,121 116 Z" fill="#74c69d" stroke="#1b4332" stroke-width="1.8"/>
+              <path d="M145 82 C161 55,184 66,178 89 C164 105,149 99,145 82 Z" fill="url(#darkLeaf)" stroke="#1b4332" stroke-width="1.8"/>
+            </g>
+            <ellipse cx="88" cy="172" rx="44" ry="9" fill="#34281f"/>
+            <rect x="40" y="166" width="96" height="18" rx="7" fill="#d58a68" stroke="#70412f" stroke-width="2"/>
+            <path d="M46 183 L57 220 Q88 226 119 220 L130 183 Z" fill="url(#terracotta)" stroke="#70412f" stroke-width="2"/>
+          </g>
+
+          <!-- Luciérnagas -->
+          <g class="garden-glow">
+            <circle cx="183" cy="66" r="3" fill="#f6f4a2"/>
+            <circle cx="429" cy="78" r="2.5" fill="#f6f4a2"/>
+            <circle cx="526" cy="45" r="2" fill="#d8f3dc"/>
+            <circle cx="222" cy="105" r="2" fill="#d8f3dc"/>
+          </g>
+          <path d="M15 223 Q325 214 635 223" fill="none" stroke="#607565" stroke-width="2" opacity="0.7"/>
         </svg>
       </div>
 
@@ -441,492 +502,79 @@
          5. FANTASY / REINO MÁGICO (Ariadna Moon)
          ============================================================== -->
     <div class="card-wrapper theme-fantasy" id="card5">
-      <!-- DRAGÓN REDISEÑADO CON ALAS ANCHAS Y DESPLEGADAS (ESTILO MODELO 3D) -->
-    <!-- DRAGÓN FANTASY REDISEÑADO -->
-<svg
-  class="flying-dragon"
-  viewBox="0 0 420 220"
-  xmlns="http://www.w3.org/2000/svg"
-  aria-hidden="true"
->
-
-  <defs>
-
-    <!-- Gradiente del cuerpo -->
-    <linearGradient
-      id="dragonBodyGradient"
-      x1="0%"
-      y1="0%"
-      x2="100%"
-      y2="100%"
-    >
-      <stop offset="0%" stop-color="#f1dcff"/>
-      <stop offset="30%" stop-color="#c77dff"/>
-      <stop offset="65%" stop-color="#7b2cbf"/>
-      <stop offset="100%" stop-color="#3c096c"/>
-    </linearGradient>
-
-    <!-- Gradiente de las alas -->
-    <linearGradient
-      id="dragonWingGradient"
-      x1="0%"
-      y1="0%"
-      x2="100%"
-      y2="100%"
-    >
-      <stop offset="0%" stop-color="#e0aaff"/>
-      <stop offset="45%" stop-color="#9d4edd"/>
-      <stop offset="100%" stop-color="#240046"/>
-    </linearGradient>
-
-    <!-- Membrana de las alas -->
-    <linearGradient
-      id="dragonMembrane"
-      x1="0%"
-      y1="0%"
-      x2="0%"
-      y2="100%"
-    >
-      <stop offset="0%" stop-color="#e0aaff" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#5a189a" stop-opacity="0.45"/>
-    </linearGradient>
-
-    <radialGradient id="dragonEyeGradient">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="40%" stop-color="#f8e16c"/>
-      <stop offset="100%" stop-color="#ff9e00"/>
-    </radialGradient>
-
-  </defs>
-
-
-  <!-- ==================================================
-       ALA TRASERA
-       ================================================== -->
-
-  <g class="dragon-wing-back">
-
-    <path
-      d="
-        M 220 112
-        C 220 79, 225 45, 257 17
-        C 269 48, 279 69, 282 91
-        C 295 73, 311 60, 329 51
-        C 319 81, 301 104, 270 126
-        Z
-      "
-      fill="url(#dragonWingGradient)"
-      stroke="#e0aaff"
-      stroke-width="2.5"
-      stroke-linejoin="round"
-    />
-
-    <!-- Nervaduras -->
-    <path
-      d="
-        M220 112 L257 17
-        M220 112 L282 91
-        M220 112 L329 51
-      "
-      fill="none"
-      stroke="#f0d6ff"
-      stroke-opacity="0.45"
-      stroke-width="2"
-    />
-
-  </g>
-
-
-  <!-- ==================================================
-       COLA
-       ================================================== -->
-
-  <path
-    d="
-      M190 126
-      C145 129, 109 151, 79 174
-      C55 192, 29 193, 10 178
-      C41 181, 58 166, 76 148
-      C102 123, 132 105, 177 102
-      Z
-    "
-    fill="url(#dragonBodyGradient)"
-    stroke="#e0aaff"
-    stroke-width="2"
-  />
-
-  <!-- Punta de cola -->
-  <path
-    d="
-      M16 178
-      L4 164
-      L31 171
-      Z
-    "
-    fill="#c77dff"
-    stroke="#e0aaff"
-    stroke-width="1.5"
-  />
-
-
-  <!-- ==================================================
-       ALA DELANTERA
-       ================================================== -->
-
-  <g class="dragon-wing-front">
-
-    <!-- estructura -->
-    <path
-      d="
-        M218 112
-        C195 81, 171 53, 126 29
-        C137 60, 151 78, 170 95
-        C142 80, 115 74, 87 76
-        C111 99, 137 111, 165 118
-        C140 118, 119 129, 101 146
-        C137 143, 171 147, 202 158
-        C214 143, 221 128, 218 112
-        Z
-      "
-      fill="url(#dragonMembrane)"
-      stroke="#e0aaff"
-      stroke-width="3"
-      stroke-linejoin="round"
-    />
-
-    <!-- huesos del ala -->
-    <path
-      d="
-        M218 112 L126 29
-        M218 112 L87 76
-        M218 112 L101 146
-      "
-      fill="none"
-      stroke="#c77dff"
-      stroke-width="4"
-      stroke-linecap="round"
-    />
-
-    <!-- nervaduras -->
-    <path
-      d="
-        M170 95 L126 29
-        M165 118 L87 76
-        M202 158 L101 146
-      "
-      fill="none"
-      stroke="#f0d6ff"
-      stroke-opacity="0.42"
-      stroke-width="1.8"
-    />
-
-  </g>
-
-
-  <!-- ==================================================
-       CUERPO
-       ================================================== -->
-
-  <ellipse
-    cx="221"
-    cy="127"
-    rx="66"
-    ry="38"
-    transform="rotate(-7 221 127)"
-    fill="url(#dragonBodyGradient)"
-    stroke="#e0aaff"
-    stroke-width="2.5"
-  />
-
-  <!-- Vientre -->
-  <path
-    d="
-      M178 137
-      C202 157, 239 161, 269 143
-      C247 166, 201 172, 169 147
-      Z
-    "
-    fill="#f0d6ff"
-    opacity="0.25"
-  />
-
-
-  <!-- ==================================================
-       CUELLO
-       ================================================== -->
-
-  <path
-    d="
-      M259 119
-      C278 103, 292 86, 310 82
-      C328 79, 339 88, 346 103
-      C326 102, 314 111, 303 126
-      C289 143, 273 147, 253 144
-      Z
-    "
-    fill="url(#dragonBodyGradient)"
-    stroke="#e0aaff"
-    stroke-width="2.5"
-  />
-
-
-  <!-- ==================================================
-       ESPINAS DEL LOMO
-       ================================================== -->
-
-  <path
-    d="
-      M181 97 L188 78 L197 99
-      M205 91 L214 69 L221 94
-      M232 91 L242 71 L248 99
-      M264 100 L278 82 L280 108
-      M290 88 L302 70 L305 92
-    "
-    fill="#e0aaff"
-    stroke="#c77dff"
-    stroke-width="2"
-    stroke-linejoin="round"
-  />
-
-
-  <!-- ==================================================
-       CABEZA
-       ================================================== -->
-
-  <path
-    d="
-      M306 84
-      C320 72, 342 69, 356 77
-      C365 82, 371 91, 374 101
-      L399 107
-      C403 108, 405 113, 401 116
-      L374 127
-      C361 137, 337 136, 323 127
-      C311 119, 304 103, 306 84
-      Z
-    "
-    fill="url(#dragonBodyGradient)"
-    stroke="#e0aaff"
-    stroke-width="2.8"
-    stroke-linejoin="round"
-  />
-
-  <!-- Hocico -->
-  <path
-    d="
-      M368 101
-      L402 106
-      Q413 110 402 118
-      L371 127
-      Q381 113 368 101
-      Z
-    "
-    fill="#8b46c5"
-    stroke="#e0aaff"
-    stroke-width="2"
-  />
-
-  <!-- Mandíbula -->
-  <path
-    d="
-      M366 121
-      Q385 126 401 116
-      Q386 137 360 132
-    "
-    fill="#5a189a"
-    stroke="#e0aaff"
-    stroke-width="1.5"
-  />
-
-  <!-- Boca -->
-  <path
-    d="
-      M371 120
-      Q386 120 399 115
-    "
-    fill="none"
-    stroke="#23002e"
-    stroke-width="2.5"
-    stroke-linecap="round"
-  />
-
-  <!-- Dientes -->
-  <path
-    d="
-      M381 120 L384 126 L388 119
-      M391 118 L394 123 L397 116
-    "
-    fill="#ffffff"
-    stroke="#ffffff"
-    stroke-width="1"
-  />
-
-  <!-- Nariz -->
-  <ellipse
-    cx="397"
-    cy="110"
-    rx="2.7"
-    ry="2"
-    fill="#180020"
-  />
-
-
-  <!-- ==================================================
-       CUERNOS
-       ================================================== -->
-
-  <path
-    d="
-      M325 78
-      C315 61, 314 48, 319 38
-      C325 51, 332 60, 338 74
-      Z
-    "
-    fill="#f0d6ff"
-    stroke="#c77dff"
-    stroke-width="2"
-  />
-
-  <path
-    d="
-      M341 75
-      C338 58, 343 45, 352 37
-      C350 53, 353 65, 357 80
-      Z
-    "
-    fill="#d8b4f8"
-    stroke="#c77dff"
-    stroke-width="2"
-  />
-
-
-  <!-- ==================================================
-       OJO
-       ================================================== -->
-
-  <ellipse
-    class="dragon-eye"
-    cx="357"
-    cy="98"
-    rx="5.5"
-    ry="4.5"
-    fill="url(#dragonEyeGradient)"
-  />
-
-  <ellipse
-    cx="358"
-    cy="98"
-    rx="1.5"
-    ry="3"
-    fill="#21002e"
-  />
-
-
-  <!-- ==================================================
-       PATAS
-       ================================================== -->
-
-  <!-- Pata delantera -->
-  <path
-    d="
-      M276 142
-      C286 153, 292 164, 290 177
-      L302 187
-    "
-    fill="none"
-    stroke="#8f4bc1"
-    stroke-width="11"
-    stroke-linecap="round"
-  />
-
-  <!-- Garras delanteras -->
-  <path
-    d="
-      M301 187 L312 189
-      M301 187 L309 196
-      M299 187 L301 199
-    "
-    fill="none"
-    stroke="#f0d6ff"
-    stroke-width="3"
-    stroke-linecap="round"
-  />
-
-  <!-- Pata trasera -->
-  <path
-    d="
-      M199 150
-      C193 166, 197 177, 210 184
-      L216 194
-    "
-    fill="none"
-    stroke="#7135a6"
-    stroke-width="12"
-    stroke-linecap="round"
-  />
-
-  <!-- Garras traseras -->
-  <path
-    d="
-      M216 194 L228 195
-      M216 194 L223 203
-      M214 193 L214 205
-    "
-    fill="none"
-    stroke="#f0d6ff"
-    stroke-width="3"
-    stroke-linecap="round"
-  />
-
-
-  <!-- ==================================================
-       ESCAMAS
-       ================================================== -->
-
-  <g
-    fill="none"
-    stroke="#f0d6ff"
-    stroke-opacity="0.35"
-    stroke-width="1.5"
-  >
-    <path d="M190 117 Q198 108 206 117"/>
-    <path d="M208 112 Q216 103 224 112"/>
-    <path d="M226 112 Q234 103 242 112"/>
-    <path d="M199 130 Q207 121 215 130"/>
-    <path d="M218 128 Q226 119 234 128"/>
-    <path d="M238 126 Q246 117 254 126"/>
-  </g>
-
-
-  <!-- ==================================================
-       DESTELLOS MÁGICOS
-       ================================================== -->
-
-  <circle
-    class="dragon-spark"
-    cx="94"
-    cy="55"
-    r="3"
-    fill="#ffffff"
-  />
-
-  <circle
-    class="dragon-spark"
-    cx="72"
-    cy="96"
-    r="2.4"
-    fill="#e0aaff"
-  />
-
-  <circle
-    class="dragon-spark"
-    cx="118"
-    cy="165"
-    r="2"
-    fill="#c77dff"
-  />
-
-</svg>
+      <!-- DRAGÓN FANTASY REDISEÑADO -->
+      <svg class="flying-dragon" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="dragonBodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f1dcff"/>
+            <stop offset="30%" stop-color="#c77dff"/>
+            <stop offset="65%" stop-color="#7b2cbf"/>
+            <stop offset="100%" stop-color="#3c096c"/>
+          </linearGradient>
+          <linearGradient id="dragonWingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e0aaff"/>
+            <stop offset="45%" stop-color="#9d4edd"/>
+            <stop offset="100%" stop-color="#240046"/>
+          </linearGradient>
+          <linearGradient id="dragonMembrane" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#e0aaff" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#5a189a" stop-opacity="0.45"/>
+          </linearGradient>
+          <radialGradient id="dragonEyeGradient">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="40%" stop-color="#f8e16c"/>
+            <stop offset="100%" stop-color="#ff9e00"/>
+          </radialGradient>
+        </defs>
+
+        <g class="dragon-wing-back">
+          <path d="M220 112 C220 79,225 45,257 17 C269 48,279 69,282 91 C295 73,311 60,329 51 C319 81,301 104,270 126 Z" fill="url(#dragonWingGradient)" stroke="#e0aaff" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M220 112 L257 17 M220 112 L282 91 M220 112 L329 51" fill="none" stroke="#f0d6ff" stroke-opacity="0.45" stroke-width="2"/>
+        </g>
+
+        <path d="M190 126 C145 129,109 151,79 174 C55 192,29 193,10 178 C41 181,58 166,76 148 C102 123,132 105,177 102 Z" fill="url(#dragonBodyGradient)" stroke="#e0aaff" stroke-width="2"/>
+        <path d="M16 178 L4 164 L31 171 Z" fill="#c77dff" stroke="#e0aaff" stroke-width="1.5"/>
+
+        <g class="dragon-wing-front">
+          <path d="M218 112 C195 81,171 53,126 29 C137 60,151 78,170 95 C142 80,115 74,87 76 C111 99,137 111,165 118 C140 118,119 129,101 146 C137 143,171 147,202 158 C214 143,221 128,218 112 Z" fill="url(#dragonMembrane)" stroke="#e0aaff" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M218 112 L126 29 M218 112 L87 76 M218 112 L101 146" fill="none" stroke="#c77dff" stroke-width="4" stroke-linecap="round"/>
+          <path d="M170 95 L126 29 M165 118 L87 76 M202 158 L101 146" fill="none" stroke="#f0d6ff" stroke-opacity="0.42" stroke-width="1.8"/>
+        </g>
+
+        <ellipse cx="221" cy="127" rx="66" ry="38" transform="rotate(-7 221 127)" fill="url(#dragonBodyGradient)" stroke="#e0aaff" stroke-width="2.5"/>
+        <path d="M178 137 C202 157,239 161,269 143 C247 166,201 172,169 147 Z" fill="#f0d6ff" opacity="0.25"/>
+        <path d="M259 119 C278 103,292 86,310 82 C328 79,339 88,346 103 C326 102,314 111,303 126 C289 143,273 147,253 144 Z" fill="url(#dragonBodyGradient)" stroke="#e0aaff" stroke-width="2.5"/>
+        <path d="M181 97 L188 78 L197 99 M205 91 L214 69 L221 94 M232 91 L242 71 L248 99 M264 100 L278 82 L280 108 M290 88 L302 70 L305 92" fill="#e0aaff" stroke="#c77dff" stroke-width="2" stroke-linejoin="round"/>
+
+        <path d="M306 84 C320 72,342 69,356 77 C365 82,371 91,374 101 L399 107 C403 108,405 113,401 116 L374 127 C361 137,337 136,323 127 C311 119,304 103,306 84 Z" fill="url(#dragonBodyGradient)" stroke="#e0aaff" stroke-width="2.8" stroke-linejoin="round"/>
+        <path d="M368 101 L402 106 Q413 110 402 118 L371 127 Q381 113 368 101 Z" fill="#8b46c5" stroke="#e0aaff" stroke-width="2"/>
+        <path d="M366 121 Q385 126 401 116 Q386 137 360 132" fill="#5a189a" stroke="#e0aaff" stroke-width="1.5"/>
+        <path d="M371 120 Q386 120 399 115" fill="none" stroke="#23002e" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M381 120 L384 126 L388 119 M391 118 L394 123 L397 116" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+        <ellipse cx="397" cy="110" rx="2.7" ry="2" fill="#180020"/>
+        <path d="M325 78 C315 61,314 48,319 38 C325 51,332 60,338 74 Z" fill="#f0d6ff" stroke="#c77dff" stroke-width="2"/>
+        <path d="M341 75 C338 58,343 45,352 37 C350 53,353 65,357 80 Z" fill="#d8b4f8" stroke="#c77dff" stroke-width="2"/>
+        <ellipse class="dragon-eye" cx="357" cy="98" rx="5.5" ry="4.5" fill="url(#dragonEyeGradient)"/>
+        <ellipse cx="358" cy="98" rx="1.5" ry="3" fill="#21002e"/>
+
+        <path d="M276 142 C286 153,292 164,290 177 L302 187" fill="none" stroke="#8f4bc1" stroke-width="11" stroke-linecap="round"/>
+        <path d="M301 187 L312 189 M301 187 L309 196 M299 187 L301 199" fill="none" stroke="#f0d6ff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M199 150 C193 166,197 177,210 184 L216 194" fill="none" stroke="#7135a6" stroke-width="12" stroke-linecap="round"/>
+        <path d="M216 194 L228 195 M216 194 L223 203 M214 193 L214 205" fill="none" stroke="#f0d6ff" stroke-width="3" stroke-linecap="round"/>
+
+        <g fill="none" stroke="#f0d6ff" stroke-opacity="0.35" stroke-width="1.5">
+          <path d="M190 117 Q198 108 206 117"/>
+          <path d="M208 112 Q216 103 224 112"/>
+          <path d="M226 112 Q234 103 242 112"/>
+          <path d="M199 130 Q207 121 215 130"/>
+          <path d="M218 128 Q226 119 234 128"/>
+          <path d="M238 126 Q246 117 254 126"/>
+        </g>
+
+        <circle class="dragon-spark" cx="94" cy="55" r="3" fill="#ffffff"/>
+        <circle class="dragon-spark" cx="72" cy="96" r="2.4" fill="#e0aaff"/>
+        <circle class="dragon-spark" cx="118" cy="165" r="2" fill="#c77dff"/>
+      </svg>
 
       <div class="start-screen" id="env5" style="background: radial-gradient(circle at center, #2a1b40 0%, #090510 100%);">
         <div style="position: relative; margin-bottom: 20px;">
@@ -934,7 +582,7 @@
         </div>
         <h2 style="font-family: 'Cinzel Decorative', serif; font-size: 2.5rem; color: #e0aaff; text-shadow: 0 0 15px rgba(224, 170, 255, 0.8);">Ariadna Moon</h2>
         <!-- TEXTO INICIO MODIFICADO PARA TEMÁTICA FANTASY -->
-        <p style="letter-spacing: 3px; margin: 12px 0 25px; color: #c77dff; font-size: 0.85rem; font-weight: 600;">SE HA REVELADO LA PROFECÍA DE LOS 18 AÑOS</p>
+        <p style="letter-spacing: 3px; margin: 12px 0 25px; color: #c77dff; font-size: 0.85rem; font-weight: 600;">SE HA REVELADO LA PROFECÍA DE LOS 15 AÑOS</p>
         <button class="btn-start-custom" onclick="openEnvelope('env5')" style="background: linear-gradient(135deg, #7b2cbf, #5a189a); color: #e0aaff; border: 1px solid #e0aaff;">
           <i class="fa-solid fa-dragon"></i> ROMPER EL HECHIZO
         </button>

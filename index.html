@@ -3,45 +3,709 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Invitaciones</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f9;
-      padding: 50px 20px;
-    }
-    .opciones {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-    .tarjeta {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 200px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: transform 0.2s;
-    }
-    .tarjeta:hover {
-      transform: translateY(-5px);
-    }
-  </style>
+  <title>Invitaciones de 15 Años - Catálogo Completo</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;600;700&family=Pacifico&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Estilos Vinculados -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Selecciona una Invitación</h1>
-
-  <div class="opciones">
-    <a href="jardin/index.html" class="tarjeta">🌸 Temática Jardín</a>
-    <a href="fantasy/index.html" class="tarjeta">🐉 Temática Fantasy</a>
+  <div class="top-nav-hint">
+    <i class="fa-solid fa-arrows-left-right"></i> Desliza horizontalmente para ver las invitaciones
   </div>
 
+  <div class="horizontal-slider">
+
+    <!-- 1. VINTAGE / ELEGANTE -->
+    <div class="card-wrapper theme-vintage" id="card1">
+      <div class="start-screen" id="env1" style="background: radial-gradient(circle, #2d221e 0%, #15100e 100%);">
+        <i class="fa-solid fa-envelope-open-text" style="font-size: 3.5rem; color: #d4a373; margin-bottom: 15px;"></i>
+        <h2 style="font-family: 'Great Vibes', cursive; font-size: 3rem; color: #d4a373;">Camila Veiga</h2>
+        <p style="letter-spacing: 2px; margin: 15px 0 25px; color: #e8d8c8; font-size: 0.85rem;">CARTA VINTAGE DE INVITACIÓN ESPECIAL</p>
+        <button class="btn-start-custom" onclick="openEnvelope('env1')">
+          <i class="fa-solid fa-key"></i> ABRIR INVITACIÓN
+        </button>
+      </div>
+
+      <section class="card-section">
+        <h2>Mis 15 Años</h2>
+        <h1>Camila Veiga</h1>
+        <p class="quote" style="font-style: italic; margin: 6px 0; max-width: 320px;">"Porque crecer es un regalo y compartirlo contigo lo hace aún más especial, te espero para celebrar"</p>
+        
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="d1">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="h1">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="m1">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="s1">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" class="photo-frame" alt="Camila Veiga Quinceañera">
+        <p style="letter-spacing: 3px; font-weight: 600; color: #d4a373;">VIERNES 25 DE JUNIO DE 2027</p>
+        <p style="font-size: 0.9rem; margin-top: 2px;">21:00 HS A 05:00 HS</p>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i> Desliza abajo</div>
+      </section>
+
+      <section class="card-section">
+        <h2>Cronograma</h2>
+        <div class="info-card">
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-time">21:00 HS</span> Bienvenida con Bebidas</div>
+            <div class="timeline-item"><span class="timeline-time">22:00 HS</span> Ingreso de la Quinceañera</div>
+            <div class="timeline-item"><span class="timeline-time">22:30 HS</span> Cena Principal</div>
+            <div class="timeline-item"><span class="timeline-time">00:30 HS</span> Baile & Cotillón</div>
+          </div>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Ubicación y Detalles</h2>
+        <div class="info-card">
+          <i class="fa-solid fa-location-dot" style="font-size: 1.8rem; color: #d4a373;"></i>
+          <h3>Salón Gran Palais</h3>
+          <p style="font-size: 0.85rem; margin-top: 5px;">Av. Principal 1234</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-action"><i class="fa-solid fa-map"></i> Cómo Llegar</a>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-user-tie" style="font-size: 1.5rem; color: #d4a373;"></i>
+          <h3>Dress Code</h3>
+          <p style="font-size: 0.85rem;">Elegante Formal. <em>Se reserva el color del vestido de la quinceañera.</em></p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-bus" style="font-size: 1.5rem; color: #d4a373;"></i>
+          <h3>Transporte</h3>
+          <p style="font-size: 0.85rem;">El transporte saldrá del Liceo N° 3 a las 20:30 HS (media hora antes de la fiesta).</p>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Participa</h2>
+        <div class="info-card">
+          <h3>Deja un mensajito</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 8px;">Escribe tus buenos deseos para Camila:</p>
+          <button class="btn-action" onclick="openWishModal('Camila')"><i class="fa-solid fa-pen"></i> Deja un mensajito</button>
+        </div>
+        <div class="info-card">
+          <h3>Sugerir Canción</h3>
+          <button class="btn-action" onclick="openSongModal('Camila')"><i class="fa-solid fa-music"></i> Recomendar Tema</button>
+        </div>
+        <div class="info-card">
+          <h3>Álbum Compartido de Fotos</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 8px;">¡Sube aquí las fotos del XV para que todos las vean!</p>
+          <a href="https://photos.google.com" target="_blank" class="btn-action btn-gallery"><i class="fa-solid fa-cloud-arrow-up"></i> Carpeta Compartida</a>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" class="photo-frame" alt="Camila">
+        <h2>Confirmación</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 8px;">Confirmar asistencia antes del 10 de Junio</p>
+        <button class="btn-action" onclick="openRSVP('Camila Veiga')"><i class="fa-solid fa-check"></i> Confirmar Asistencia</button>
+        <h3 style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #d4a373; margin-top: 15px;">¡Te espero en la fiesta!</h3>
+      </section>
+    </div>
+
+    <!-- 2. ACUÁTICA / UNDER THE SEA -->
+    <div class="card-wrapper theme-aquatic" id="card2">
+      <div class="aquatic-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+
+      <div class="start-screen" id="env2" style="background: radial-gradient(circle at center, #0a3d62 0%, #020b14 100%);">
+        <div style="position: relative; margin-bottom: 20px;">
+          <i class="fa-solid fa-water" style="font-size: 4rem; color: #90e0ef; filter: drop-shadow(0 0 20px #00b4d8);"></i>
+          <i class="fa-solid fa-fish" style="font-size: 1.8rem; color: #48cae4; position: absolute; top: -10px; right: -15px;"></i>
+        </div>
+        <h2 style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #90e0ef; text-shadow: 0 0 20px rgba(144, 224, 239, 0.7);">Marina Rios</h2>
+        <p style="letter-spacing: 3px; margin: 12px 0 25px; color: #00b4d8; font-size: 0.85rem; font-weight: 600;">BIENVENIDOS AL MUNDO SUBMARINO</p>
+        <button class="btn-start-custom" onclick="openEnvelope('env2')" style="background: linear-gradient(135deg, #00b4d8, #0077b6); color: #fff;">
+          <i class="fa-solid fa-compass"></i> SUMÉRGATE AL OCÉANO
+        </button>
+      </div>
+
+      <section class="card-section">
+        <h2>Mis 15 Años</h2>
+        <h1>Marina Rios</h1>
+        <p class="quote" style="margin: 6px 0; max-width: 320px; font-size: 0.9rem; color: #90e0ef;">"Porque crecer es un regalo y compartirlo contigo lo hace aún más especial, te espero para celebrar"</p>
+        
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="d2">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="h2">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="m2">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="s2">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" class="photo-frame" style="border: 2px solid #00b4d8;" alt="Marina XV">
+        <p style="letter-spacing: 3px; font-weight: 600; color: #00b4d8;">SÁBADO 16 DE ENERO DE 2027</p>
+        <p style="font-size: 0.9rem; margin-top: 2px;">21:00 HS A 05:30 HS</p>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i> Desliza abajo</div>
+      </section>
+
+      <section class="card-section">
+        <h2>Cronograma Marino</h2>
+        <div class="info-card" style="border-color: #00b4d8;">
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-time">21:00 HS</span> Cóctel Oceanográfico</div>
+            <div class="timeline-item"><span class="timeline-time">22:00 HS</span> Entrada de Marina</div>
+            <div class="timeline-item"><span class="timeline-time">22:30 HS</span> Cena de Gala</div>
+            <div class="timeline-item"><span class="timeline-time">01:00 HS</span> Fiesta Under The Sea</div>
+          </div>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Ubicación y Traslado</h2>
+        <div class="info-card" style="border-color: #00b4d8;">
+          <i class="fa-solid fa-anchor" style="font-size: 1.8rem; color: #90e0ef;"></i>
+          <h3>Club de Costa Marina</h3>
+          <p style="font-size: 0.85rem; margin-top: 5px;">Rambla Costanera 402</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-action"><i class="fa-solid fa-map-location-dot"></i> Ver Mapa GPS</a>
+        </div>
+        <div class="info-card" style="border-color: #00b4d8;">
+          <i class="fa-solid fa-shirt" style="font-size: 1.5rem; color: #90e0ef;"></i>
+          <h3>Dress Code</h3>
+          <p style="font-size: 0.85rem;">Elegante Marino / Azul & Plata. <em>Se reserva el color del vestido de la quinceañera.</em></p>
+        </div>
+        <div class="info-card" style="border-color: #00b4d8;">
+          <i class="fa-solid fa-bus" style="font-size: 1.5rem; color: #90e0ef;"></i>
+          <h3>Transporte</h3>
+          <p style="font-size: 0.8rem; color: #90e0ef;">Autobús sale desde Liceo N° 3 a las 20:30 HS (media hora antes).</p>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Experiencia Marina</h2>
+        <div class="info-card" style="border-color: #00b4d8;">
+          <h3>Playlist Oficial</h3>
+          <button class="btn-action" onclick="openSongModal('Marina')"><i class="fa-solid fa-music"></i> Sugerir Tema</button>
+        </div>
+        <div class="info-card" style="border-color: #00b4d8;">
+          <h3>Álbum Compartido de Fotos</h3>
+          <a href="https://photos.google.com" target="_blank" class="btn-action btn-gallery"><i class="fa-solid fa-camera"></i> Subir Fotos del XV</a>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" class="photo-frame" style="border: 2px solid #00b4d8;" alt="Marina">
+        <h2>Confirmación</h2>
+        <p style="font-size: 0.85rem; margin: 8px 0;">Confirmar asistencia antes del 5 de Enero</p>
+        <button class="btn-action" onclick="openRSVP('Marina Rios')"><i class="fa-solid fa-paper-plane"></i> Confirmar Asistencia</button>
+        <h3 style="font-family: 'Pacifico', cursive; font-size: 2rem; color: #90e0ef; margin-top: 15px;">¡Te espero en la fiesta!</h3>
+      </section>
+    </div>
+
+    <!-- 3. NEÓN & GLAM -->
+    <div class="card-wrapper theme-neon" id="card3">
+      <div class="start-screen" id="env3" style="background: radial-gradient(circle, #141824 0%, #08090d 100%);">
+        <p style="letter-spacing: 3px; margin-bottom: 10px; color: #00f0ff; font-weight: 700;">NEON NIGHT FESTIVAL</p>
+        <div class="vinyl-disc" onclick="openEnvelope('env3')">
+          <div class="vinyl-center">MIS XV<br>VALENTINA</div>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 15px; color: #ff007f; font-weight: 600; text-shadow: 0 0 10px #ff007f;">
+          <i class="fa-solid fa-compact-disc"></i> TOCA EL VINILO PARA ENCENDER LA FIESTA
+        </p>
+      </div>
+
+      <section class="card-section">
+        <h2>XV NIGHT</h2>
+        <h1>Valentina Morales</h1>
+        <p class="quote" style="margin: 6px 0; max-width: 320px; font-size: 0.9rem; color: #00f0ff;">"Porque crecer es un regalo y compartirlo contigo lo hace aún más especial, te espero para celebrar"</p>
+        
+        <div class="countdown-grid">
+          <div class="time-box" style="border-color:#00f0ff; color:#00f0ff;"><span class="num" id="d3">00</span><span class="label">Días</span></div>
+          <div class="time-box" style="border-color:#00f0ff; color:#00f0ff;"><span class="num" id="h3">00</span><span class="label">Horas</span></div>
+          <div class="time-box" style="border-color:#00f0ff; color:#00f0ff;"><span class="num" id="m3">00</span><span class="label">Min</span></div>
+          <div class="time-box" style="border-color:#00f0ff; color:#00f0ff;"><span class="num" id="s3">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" class="photo-frame" style="border: 2px solid #00f0ff;" alt="Valentina XV">
+        <p style="letter-spacing: 3px; font-weight: 700; color: #ff007f;">SÁBADO 14 DE NOVIEMBRE DE 2026</p>
+        <p style="font-size: 0.9rem; margin-top: 2px;">22:00 HS A 06:00 HS</p>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i> Desliza abajo</div>
+      </section>
+
+      <section class="card-section">
+        <h2>Cronograma Neón</h2>
+        <div class="info-card" style="border-color: #00f0ff;">
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-time">22:00 HS</span> RECEPCIÓN NEÓN</div>
+            <div class="timeline-item"><span class="timeline-time">23:00 HS</span> ENTRADA DE VALEN</div>
+            <div class="timeline-item"><span class="timeline-time">23:30 HS</span> CENA</div>
+            <div class="timeline-item"><span class="timeline-time">01:30 HS</span> DANCE & GLOW PARTY</div>
+          </div>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Ubicación y Detalles</h2>
+        <div class="info-card" style="border-color: #ff007f;">
+          <i class="fa-solid fa-location-dot" style="font-size: 1.8rem; color: #00f0ff;"></i>
+          <h3>Club Neon Night</h3>
+          <p style="font-size: 0.85rem; margin-top: 5px;">Calle 45 #890</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-action"><i class="fa-solid fa-route"></i> Abrir GPS</a>
+        </div>
+        <div class="info-card" style="border-color: #00f0ff;">
+          <i class="fa-solid fa-shirt" style="font-size: 1.5rem; color: #ff007f;"></i>
+          <h3>Dress Code</h3>
+          <p style="font-size: 0.85rem;">Glam & Glow. <em>Se reserva el color del vestido de la quinceañera.</em></p>
+        </div>
+        <div class="info-card" style="border-color: #ff007f;">
+          <i class="fa-solid fa-bus" style="font-size: 1.5rem; color: #00f0ff;"></i>
+          <h3>Transporte</h3>
+          <p style="font-size: 0.8rem; color: #00f0ff;">Transporte sale del Liceo N° 3 a las 21:30 HS (media hora antes de la fiesta).</p>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Experiencia Glow</h2>
+        <div class="info-card" style="border-color: #ff007f;">
+          <h3>Playlist Neón</h3>
+          <button class="btn-action" onclick="openSongModal('Valentina')"><i class="fa-solid fa-music"></i> Recomendar Tema</button>
+        </div>
+        <div class="info-card" style="border-color: #00f0ff;">
+          <h3>Álbum Compartido</h3>
+          <a href="https://photos.google.com" target="_blank" class="btn-action btn-gallery"><i class="fa-solid fa-camera"></i> Subir Fotos al Álbum</a>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" class="photo-frame" style="border: 2px solid #ff007f;" alt="Valentina">
+        <h2>Confirmación</h2>
+        <p style="font-size: 0.85rem; margin: 8px 0;">Confirmar asistencia antes del 1 de Noviembre</p>
+        <button class="btn-action" onclick="openRSVP('Valentina Morales')"><i class="fa-solid fa-paper-plane"></i> Confirmar Asistencia</button>
+        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: #00f0ff; margin-top: 15px;">¡TE ESPERO EN LA FIESTA!</h3>
+      </section>
+    </div>
+
+    <!-- 4. FLORAL / JARDÍN ENCANTADO -->
+    <div class="card-wrapper theme-floral" id="card4">
+      <div class="potted-plants-container">
+        <svg class="potted-plants-svg" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="10" y1="185" x2="490" y2="185" stroke="#4a5d4e" stroke-width="2"/>
+          <path d="M 50 145 L 60 185 L 90 185 L 100 145 Z" fill="#718879" stroke="#2d3a30" stroke-width="2"/>
+          <path d="M 55 145 C 40 120, 30 110, 45 95 C 60 110, 65 130, 75 145" fill="#425749" stroke="#1d2921" stroke-width="1.5"/>
+          <path d="M 70 145 C 65 115, 75 90, 88 80 C 95 100, 85 130, 80 145" fill="#52695a" stroke="#1d2921" stroke-width="1.5"/>
+          <path d="M 105 160 L 110 185 L 130 185 L 135 160 Z" fill="#bc8a5f" stroke="#2d3a30" stroke-width="2"/>
+          <path d="M 115 160 Q 110 140 112 130 Q 120 145 122 160" stroke="#384a3c" stroke-width="3" fill="none"/>
+          <path d="M 140 135 L 145 185 L 185 185 L 190 135 Z" fill="#ddb892" stroke="#2d3a30" stroke-width="2"/>
+          <rect x="140" y="145" width="50" height="10" fill="#b08968"/>
+          <path d="M 145 135 L 155 105 L 165 135 M 158 135 L 165 95 L 172 135 M 165 135 L 178 105 L 185 135" fill="#2d6a4f" stroke="#1b4332" stroke-width="1.5"/>
+          <path d="M 200 115 L 210 185 L 270 185 L 280 115 Z" fill="#b06d48" stroke="#2d3a30" stroke-width="2"/>
+          <ellipse cx="240" cy="115" rx="40" ry="8" fill="#8c502e"/>
+          <path d="M 215 115 C 205 70, 215 30, 225 20 C 235 40, 235 80, 235 115 Z" fill="#52796f" stroke="#cad2c5" stroke-width="2"/>
+          <path d="M 230 115 C 230 60, 240 15, 250 10 C 260 30, 258 70, 255 115 Z" fill="#354f52" stroke="#cad2c5" stroke-width="2"/>
+          <path d="M 250 115 C 255 65, 270 35, 280 25 C 285 50, 275 85, 270 115 Z" fill="#52796f" stroke="#cad2c5" stroke-width="2"/>
+          <path d="M 295 125 L 305 185 L 365 185 L 375 125 Z" fill="#c97c5d" stroke="#2d3a30" stroke-width="2"/>
+          <path d="M 280 140 Q 260 160 270 180 Q 285 160 295 135" fill="#40916c"/>
+          <path d="M 310 125 C 300 150, 290 170, 315 190 C 330 165, 325 140, 320 125" fill="#52b788"/>
+          <path d="M 350 125 Q 380 145 390 165 Q 365 155 355 125" fill="#2d6a4f"/>
+          <path d="M 390 140 L 398 185 L 432 185 L 440 140 Z" fill="#e0aaff" stroke="#2d3a30" stroke-width="2"/>
+          <path d="M 395 140 C 380 120, 360 100, 385 85 C 410 110, 410 125, 415 140 Z" fill="#74c69d" stroke="#1b4332" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+      <div class="start-screen" id="env4" style="background: radial-gradient(circle, #17281d 0%, #08100b 100%);">
+        <i class="fa-solid fa-seedling" style="font-size: 3.5rem; color: #a3b18a; margin-bottom: 15px;"></i>
+        <h2 style="font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: #a3b18a;">Sofía Benítez</h2>
+        <p style="letter-spacing: 2px; margin: 15px 0 25px; color: #b5c2a3; font-size: 0.85rem;">BIENVENIDO AL JARDÍN ENCANTADO</p>
+        <button class="btn-start-custom" onclick="openEnvelope('env4')">
+          <i class="fa-solid fa-leaf"></i> ENTRAR AL JARDÍN
+        </button>
+      </div>
+
+      <section class="card-section">
+        <h2>Mis Quince Años</h2>
+        <h1>Sofía Benítez</h1>
+        <p class="quote" style="margin: 6px 0; max-width: 320px; font-size: 0.9rem; color: #b5c2a3;">"Porque crecer es un regalo y compartirlo contigo lo hace aún más especial, te espero para celebrar"</p>
+        
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="d4">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="h4">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="m4">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="s4">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" class="photo-frame" alt="Sofía XV">
+        <p style="letter-spacing: 3px; font-weight: 600; color: #a3b18a;">SÁBADO 12 DE DICIEMBRE DE 2026</p>
+        <p style="font-size: 0.9rem; margin-top: 2px;">20:00 HS A 04:30 HS</p>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i> Desliza abajo</div>
+      </section>
+
+      <section class="card-section">
+        <h2>Cronograma Botánico</h2>
+        <div class="info-card">
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-time">20:00 HS</span> Recepción en el Jardín</div>
+            <div class="timeline-item"><span class="timeline-time">21:00 HS</span> Entrada de Sofía</div>
+            <div class="timeline-item"><span class="timeline-time">21:30 HS</span> Banquete Real</div>
+            <div class="timeline-item"><span class="timeline-time">23:30 HS</span> Vals & Fiesta</div>
+          </div>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Ubicación y Vestimenta</h2>
+        <div class="info-card">
+          <i class="fa-solid fa-tree" style="font-size: 1.8rem; color: #a3b18a;"></i>
+          <h3>La Quinta de las Rosas</h3>
+          <p style="font-size: 0.85rem; margin-top: 5px;">Camino del Valle 77</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-action"><i class="fa-solid fa-map-pin"></i> Ver Mapa</a>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-shirt" style="font-size: 1.5rem; color: #a3b18a;"></i>
+          <h3>Dress Code</h3>
+          <p style="font-size: 0.85rem;">Formal / Etiqueta. <em>Se reserva el color del vestido de la quinceañera.</em></p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-bus" style="font-size: 1.5rem; color: #a3b18a;"></i>
+          <h3>Transporte</h3>
+          <p style="font-size: 0.8rem; color: #a3b18a;">El transporte saldrá del Liceo N° 3 a las 19:30 HS (media hora antes).</p>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Interactivo Natural</h2>
+        <div class="info-card">
+          <h3>Sugerir Canción</h3>
+          <button class="btn-action" onclick="openSongModal('Sofía')"><i class="fa-solid fa-music"></i> Sugerir Canción</button>
+        </div>
+        <div class="info-card">
+          <h3>Álbum Compartido de Fotos</h3>
+          <a href="https://photos.google.com" target="_blank" class="btn-action btn-gallery"><i class="fa-solid fa-camera"></i> Subir Fotos del XV</a>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" class="photo-frame" alt="Sofía">
+        <h2>Confirmar Asistencia</h2>
+        <p style="font-size: 0.85rem; margin: 8px 0;">Confirmar hasta el 25 de Noviembre</p>
+        <button class="btn-action" onclick="openRSVP('Sofía Benítez')"><i class="fa-solid fa-check"></i> Confirmar Asistencia</button>
+        <h3 style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #a3b18a; margin-top: 15px;">¡Te espero para celebrar!</h3>
+      </section>
+    </div>
+
+    <!-- 5. FANTASY / REINO MÁGICO -->
+    <div class="card-wrapper theme-fantasy" id="card5">
+      <svg class="flying-dragon" viewBox="0 0 240 180">
+        <defs>
+          <linearGradient id="dragonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f0d6ff" />
+            <stop offset="50%" stop-color="#c77dff" />
+            <stop offset="100%" stop-color="#3c096c" />
+          </linearGradient>
+        </defs>
+        <g class="wing-left">
+          <path fill="url(#dragonGradient)" opacity="0.85" d="M 110 50 C 80 10, 40 5, 5 35 C 25 55, 50 65, 75 70 C 90 65, 100 58, 110 50 Z"/>
+          <path fill="none" stroke="#e0aaff" stroke-width="1.5" d="M 110 50 L 5 35 M 110 50 L 25 55 M 110 50 L 50 65 M 110 50 L 75 70"/>
+        </g>
+        <g class="wing-right">
+          <path fill="url(#dragonGradient)" opacity="0.85" d="M 110 50 C 140 10, 180 5, 215 35 C 195 55, 170 65, 145 70 C 130 65, 120 58, 110 50 Z"/>
+          <path fill="none" stroke="#e0aaff" stroke-width="1.5" d="M 110 50 L 215 35 M 110 50 L 195 55 M 110 50 L 170 65 M 110 50 L 145 70"/>
+        </g>
+        <path fill="url(#dragonGradient)" d="M 106 70 Q 110 130 118 165 Q 120 170 125 175 Q 118 168 114 150 Q 108 120 104 70 Z"/>
+        <ellipse cx="110" cy="55" rx="8" ry="20" fill="#e0aaff"/>
+        <path fill="#e0aaff" d="M 106 38 L 110 20 L 114 38 Z"/>
+        <path fill="#c77dff" d="M 107 24 L 100 15 L 106 22 Z M 113 24 L 120 15 L 114 22 Z"/>
+      </svg>
+
+      <div class="start-screen" id="env5" style="background: radial-gradient(circle at center, #2a1b40 0%, #090510 100%);">
+        <div style="position: relative; margin-bottom: 20px;">
+          <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 4rem; color: #e0aaff; filter: drop-shadow(0 0 25px #c77dff);"></i>
+        </div>
+        <h2 style="font-family: 'Cinzel Decorative', serif; font-size: 2.5rem; color: #e0aaff; text-shadow: 0 0 15px rgba(224, 170, 255, 0.8);">Ariadna Moon</h2>
+        <p style="letter-spacing: 3px; margin: 12px 0 25px; color: #c77dff; font-size: 0.85rem; font-weight: 600;">SE HA REVELADO LA PROFECÍA DE LOS 18 AÑOS</p>
+        <button class="btn-start-custom" onclick="openEnvelope('env5')" style="background: linear-gradient(135deg, #7b2cbf, #5a189a); color: #e0aaff; border: 1px solid #e0aaff;">
+          <i class="fa-solid fa-dragon"></i> ROMPER EL HECHIZO
+        </button>
+      </div>
+
+      <section class="card-section">
+        <h2>Mis 15 Años Mágicos</h2>
+        <h1 style="font-family: 'Cinzel', serif; font-weight: 700; color: #e0aaff;">Ariadna Moon</h1>
+        <p class="quote" style="margin: 6px 0; max-width: 320px; font-size: 0.9rem; color: #d8bbff;">"Porque crecer es un regalo y compartirlo contigo lo hace aún más especial, te espero para celebrar"</p>
+        
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="d5">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="h5">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="m5">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="s5">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" class="photo-frame" style="border: 2px solid #c77dff;" alt="Ariadna XV">
+        <p style="letter-spacing: 3px; font-weight: 600; color: #e0aaff;">SÁBADO 31 DE OCTUBRE DE 2026</p>
+        <p style="font-size: 0.9rem; margin-top: 2px;">20:30 HS A 05:00 HS</p>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i> Desliza abajo</div>
+      </section>
+
+      <section class="card-section">
+        <h2>Cronograma Real</h2>
+        <div class="info-card" style="border-color: #c77dff;">
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-time">20:30 HS</span> Apertura de Puertas</div>
+            <div class="timeline-item"><span class="timeline-time">21:30 HS</span> Gran Entrada de Ariadna</div>
+            <div class="timeline-item"><span class="timeline-time">22:00 HS</span> Banquete Mágico</div>
+            <div class="timeline-item"><span class="timeline-time">00:00 HS</span> Baile de Máscaras</div>
+          </div>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Ubicación y Transporte</h2>
+        <div class="info-card" style="border-color: #c77dff;">
+          <i class="fa-solid fa-castle" style="font-size: 1.8rem; color: #e0aaff;"></i>
+          <h3>Castillo Místico</h3>
+          <p style="font-size: 0.85rem; margin-top: 5px;">Camino Antiguo Km 12</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-action"><i class="fa-solid fa-map-location-dot"></i> Ver en Mapa</a>
+        </div>
+        <div class="info-card" style="border-color: #c77dff;">
+          <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 1.5rem; color: #e0aaff;"></i>
+          <h3>Dress Code</h3>
+          <p style="font-size: 0.85rem;">Gala de Fantasía. <em>Se reserva el color del vestido de la quinceañera.</em></p>
+        </div>
+        <div class="info-card" style="border-color: #c77dff;">
+          <i class="fa-solid fa-bus" style="font-size: 1.5rem; color: #e0aaff;"></i>
+          <h3>Transporte</h3>
+          <p style="font-size: 0.8rem; color: #e0aaff;">Salida de autobús desde Liceo N° 3 a las 20:00 HS (media hora antes de la fiesta).</p>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <h2>Música & Galería</h2>
+        <div class="info-card" style="border-color: #c77dff;">
+          <h3>Playlist Mágica</h3>
+          <button class="btn-action" onclick="openSongModal('Ariadna')"><i class="fa-solid fa-music"></i> Recomendar Canción</button>
+        </div>
+        <div class="info-card" style="border-color: #c77dff;">
+          <h3>Álbum Compartido del Reino</h3>
+          <a href="https://photos.google.com" target="_blank" class="btn-action btn-gallery"><i class="fa-solid fa-cloud-arrow-up"></i> Compartir Fotos</a>
+        </div>
+        <div class="scroll-down-hint"><i class="fa-solid fa-chevron-down"></i></div>
+      </section>
+
+      <section class="card-section">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" class="photo-frame" style="border: 2px solid #c77dff;" alt="Ariadna">
+        <h2>Confirmación</h2>
+        <p style="font-size: 0.85rem; margin: 8px 0;">Confirmar asistencia antes del 15 de Octubre</p>
+        <button class="btn-action" onclick="openRSVP('Ariadna Moon')"><i class="fa-solid fa-feather"></i> Confirmar Asistencia</button>
+        <h3 style="font-family: 'Cinzel', serif; font-size: 1.6rem; color: #e0aaff; margin-top: 15px; font-weight: 700;">¡Te espero en la fiesta!</h3>
+      </section>
+    </div>
+
+    <!-- TARJETAS DE UNA SOLA CARILLA -->
+    <!-- OPCIÓN 1: PRINCESA ROSA ORO -->
+    <div class="card-wrapper single-page">
+      <div class="invitation-card style-rose-gold">
+        <div>
+          <p style="text-transform:uppercase; font-size:0.75rem; letter-spacing:3px; opacity:0.8;">Mis 15 Años</p>
+          <h1 class="main-title">Valentina</h1>
+          <p class="sub-title">UNA NOCHE MÁGICA</p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="sd1">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="sh1">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="sm1">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="ss1">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <div class="info-section">
+          <p><i class="fa-regular fa-calendar-check"></i> Sábado, 14 de Noviembre - 21:00 HS</p>
+          <p><i class="fa-solid fa-location-dot"></i> Salón "Palacio Real"</p>
+          <p style="font-size:0.8rem; opacity:0.7; margin-top:4px;">Av. Libertador 1540</p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="accent-btn" onclick="openRSVP('Valentina (Rosa Oro)')"><i class="fa-solid fa-envelope-open"></i> Confirmar Asistencia</button>
+          <a class="btn-secondary" href="https://maps.google.com" target="_blank"><i class="fa-solid fa-map-location-dot"></i> Cómo Llegar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPCIÓN 2: GALA NOCTURNA DORADA -->
+    <div class="card-wrapper single-page">
+      <div class="invitation-card style-gala-gold">
+        <div>
+          <p style="text-transform:uppercase; font-size:0.75rem; letter-spacing:4px; color:#d4af37;">XV YEARS GALA</p>
+          <h1 class="main-title">VALENTINA</h1>
+          <p class="sub-title">EXCLUSIVITY & CELEBRATION</p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="sd2">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="sh2">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="sm2">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="ss2">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <div class="info-section">
+          <p><i class="fa-regular fa-calendar-check" style="color:#d4af37;"></i> 14 DE NOVIEMBRE | 21:30 HS</p>
+          <p><i class="fa-solid fa-gem" style="color:#d4af37;"></i> Madero Walk Ballroom</p>
+          <p style="font-size:0.8rem; color:#d4af37; opacity:0.8;">Dress Code: Black Tie / Gala</p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="accent-btn" onclick="openRSVP('Valentina (Gala)')"><i class="fa-solid fa-check"></i> R.S.V.P. ONLINE</button>
+          <a class="btn-secondary" href="https://maps.google.com" target="_blank"><i class="fa-solid fa-location-arrow"></i> Ver Mapa</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPCIÓN 3: NEÓN & CYBER PARTY -->
+    <div class="card-wrapper single-page">
+      <div class="invitation-card style-neon-party">
+        <div>
+          <p style="font-family:'Orbitron'; font-size:0.75rem; letter-spacing:4px; color:#00f2fe;">#VALENXV</p>
+          <h1 class="main-title">VALEN</h1>
+          <p class="sub-title">NEON NIGHT FEST</p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="time-box" style="border-color:#00f2fe; color:#00f2fe;"><span class="num" id="sd3">00</span><span class="label">Días</span></div>
+          <div class="time-box" style="border-color:#00f2fe; color:#00f2fe;"><span class="num" id="sh3">00</span><span class="label">Horas</span></div>
+          <div class="time-box" style="border-color:#00f2fe; color:#00f2fe;"><span class="num" id="sm3">00</span><span class="label">Min</span></div>
+          <div class="time-box" style="border-color:#00f2fe; color:#00f2fe;"><span class="num" id="ss3">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <div class="info-section">
+          <p><i class="fa-solid fa-bolt" style="color:#00f2fe;"></i> 14 NOV - 22:00 HS</p>
+          <p><i class="fa-solid fa-vr-cardboard" style="color:#00f2fe;"></i> Club Space Complex</p>
+          <p style="font-size:0.8rem; color:#ff0844; margin-top:4px;">Dress Code: Neon / Glow Details</p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="accent-btn" onclick="openRSVP('Valen (Neon Card)')">CONFIRMAR PASS</button>
+          <a class="btn-secondary" href="https://maps.google.com" target="_blank"><i class="fa-solid fa-compass"></i> GPS Spot</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPCIÓN 4: JARDÍN ENCANTADO -->
+    <div class="card-wrapper single-page">
+      <div class="invitation-card style-enchanted-garden">
+        <div>
+          <p style="font-size:0.75rem; letter-spacing:3px; color:#a8e6cf;">Mis Quince Años</p>
+          <h1 class="main-title">Valentina</h1>
+          <p class="sub-title">ENTRE FLORES Y SUEÑOS</p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="time-box"><span class="num" id="sd4">00</span><span class="label">Días</span></div>
+          <div class="time-box"><span class="num" id="sh4">00</span><span class="label">Horas</span></div>
+          <div class="time-box"><span class="num" id="sm4">00</span><span class="label">Min</span></div>
+          <div class="time-box"><span class="num" id="ss4">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <div class="info-section">
+          <p><i class="fa-solid fa-leaf" style="color:#a8e6cf;"></i> Sábado, 14 de Noviembre - 19:30 HS</p>
+          <p><i class="fa-solid fa-tree" style="color:#a8e6cf;"></i> Quinta "Los Olivos"</p>
+          <p style="font-size:0.8rem; opacity:0.8;">Camino de las Hortensias 880</p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="accent-btn" onclick="openRSVP('Valentina (Jardín Card)')"><i class="fa-solid fa-seedling"></i> Asistiré con Gusto</button>
+          <a class="btn-secondary" href="https://maps.google.com" target="_blank"><i class="fa-solid fa-map"></i> Ubicación</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPCIÓN 5: PARTY SUN & VIBES -->
+    <div class="card-wrapper single-page">
+      <div class="invitation-card style-tropical-pop">
+        <div>
+          <p style="font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#d4af37;">¡Fiesta de 15!</p>
+          <h1 class="main-title">Valen</h1>
+          <p class="sub-title">PARTY, SUN & VIBES</p>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="time-box" style="background:rgba(0,0,0,0.3); border-color:#d4af37;"><span class="num" id="sd5">00</span><span class="label">Días</span></div>
+          <div class="time-box" style="background:rgba(0,0,0,0.3); border-color:#d4af37;"><span class="num" id="sh5">00</span><span class="label">Horas</span></div>
+          <div class="time-box" style="background:rgba(0,0,0,0.3); border-color:#d4af37;"><span class="num" id="sm5">00</span><span class="label">Min</span></div>
+          <div class="time-box" style="background:rgba(0,0,0,0.3); border-color:#d4af37;"><span class="num" id="ss5">00</span><span class="label">Seg</span></div>
+        </div>
+
+        <div class="info-section">
+          <p><i class="fa-solid fa-sun" style="color:#d4af37;"></i> 14 DE NOVIEMBRE - 18:00 HS</p>
+          <p><i class="fa-solid fa-umbrella-beach" style="color:#d4af37;"></i> Sunset Beach Club</p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="accent-btn" onclick="openRSVP('Valen (Tropical Card)')">CONFIRMAR AHORA</button>
+          <a class="btn-secondary" href="https://maps.google.com" target="_blank"><i class="fa-solid fa-location-dot"></i> Ver Mapa</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL RSVP GLOBAL -->
+  <div class="modal-overlay" id="rsvpModal">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeRSVP()">&times;</span>
+      <h3 id="rsvpTitle">Confirmar Asistencia</h3>
+      <form onsubmit="submitRSVP(event)">
+        <label>Nombre y Apellido Completo:</label>
+        <input type="text" id="rsvpName" required placeholder="Ej: Maria Lopez">
+
+        <label>Cédula de Identidad:</label>
+        <input type="text" id="rsvpId" required placeholder="Ej: 1.234.567-8">
+
+        <label>Restricción Alimenticia:</label>
+        <select id="rsvpDiet">
+          <option value="Ninguna">Ninguna (Menú Tradicional)</option>
+          <option value="Celíaco">Celíaco / Sin Gluten</option>
+          <option value="Vegetariano">Vegetariano</option>
+          <option value="Vegano">Vegano</option>
+        </select>
+
+        <button type="submit" class="btn-action" style="width: 100%; margin-top: 20px; justify-content: center;">
+          Enviar Confirmación
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL SUGERIR CANCIÓN GLOBAL -->
+  <div class="modal-overlay" id="songModal">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeSongModal()">&times;</span>
+      <h3>Sugerir Canción para la Playlist</h3>
+      <form onsubmit="submitSong(event)">
+        <label>Canción y Artista:</label>
+        <input type="text" id="songInput" required placeholder="Ej: Taylor Swift - Cruel Summer">
+
+        <button type="submit" class="btn-action" style="width: 100%; margin-top: 20px; justify-content: center;">
+          Enviar a la Playlist
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script Lógico Vinculado -->
+  <script src="script.js"></script>
 </body>
 </html>

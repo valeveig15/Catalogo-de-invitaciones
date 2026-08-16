@@ -442,36 +442,491 @@
          ============================================================== -->
     <div class="card-wrapper theme-fantasy" id="card5">
       <!-- DRAGÓN REDISEÑADO CON ALAS ANCHAS Y DESPLEGADAS (ESTILO MODELO 3D) -->
-      <svg class="flying-dragon" viewBox="0 0 240 180">
-        <defs>
-          <linearGradient id="dragonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f0d6ff" />
-            <stop offset="50%" stop-color="#c77dff" />
-            <stop offset="100%" stop-color="#3c096c" />
-          </linearGradient>
-        </defs>
-        
-        <!-- Ala Izquierda Animada -->
-        <g class="wing-left">
-          <path fill="url(#dragonGradient)" opacity="0.85" d="M 110 50 C 80 10, 40 5, 5 35 C 25 55, 50 65, 75 70 C 90 65, 100 58, 110 50 Z"/>
-          <path fill="none" stroke="#e0aaff" stroke-width="1.5" d="M 110 50 L 5 35 M 110 50 L 25 55 M 110 50 L 50 65 M 110 50 L 75 70"/>
-        </g>
+    <!-- DRAGÓN FANTASY REDISEÑADO -->
+<svg
+  class="flying-dragon"
+  viewBox="0 0 420 220"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
 
-        <!-- Ala Derecha Animada -->
-        <g class="wing-right">
-          <path fill="url(#dragonGradient)" opacity="0.85" d="M 110 50 C 140 10, 180 5, 215 35 C 195 55, 170 65, 145 70 C 130 65, 120 58, 110 50 Z"/>
-          <path fill="none" stroke="#e0aaff" stroke-width="1.5" d="M 110 50 L 215 35 M 110 50 L 195 55 M 110 50 L 170 65 M 110 50 L 145 70"/>
-        </g>
+  <defs>
 
-        <!-- Cuerpo del Dragón (Vista Trasera / Vuelo Central) -->
-        <!-- Cola alargada -->
-        <path fill="url(#dragonGradient)" d="M 106 70 Q 110 130 118 165 Q 120 170 125 175 Q 118 168 114 150 Q 108 120 104 70 Z"/>
-        <!-- Torso y Cabeza -->
-        <ellipse cx="110" cy="55" rx="8" ry="20" fill="#e0aaff"/>
-        <path fill="#e0aaff" d="M 106 38 L 110 20 L 114 38 Z"/>
-        <!-- Horns/Orejas -->
-        <path fill="#c77dff" d="M 107 24 L 100 15 L 106 22 Z M 113 24 L 120 15 L 114 22 Z"/>
-      </svg>
+    <!-- Gradiente del cuerpo -->
+    <linearGradient
+      id="dragonBodyGradient"
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="100%"
+    >
+      <stop offset="0%" stop-color="#f1dcff"/>
+      <stop offset="30%" stop-color="#c77dff"/>
+      <stop offset="65%" stop-color="#7b2cbf"/>
+      <stop offset="100%" stop-color="#3c096c"/>
+    </linearGradient>
+
+    <!-- Gradiente de las alas -->
+    <linearGradient
+      id="dragonWingGradient"
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="100%"
+    >
+      <stop offset="0%" stop-color="#e0aaff"/>
+      <stop offset="45%" stop-color="#9d4edd"/>
+      <stop offset="100%" stop-color="#240046"/>
+    </linearGradient>
+
+    <!-- Membrana de las alas -->
+    <linearGradient
+      id="dragonMembrane"
+      x1="0%"
+      y1="0%"
+      x2="0%"
+      y2="100%"
+    >
+      <stop offset="0%" stop-color="#e0aaff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#5a189a" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <radialGradient id="dragonEyeGradient">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f8e16c"/>
+      <stop offset="100%" stop-color="#ff9e00"/>
+    </radialGradient>
+
+  </defs>
+
+
+  <!-- ==================================================
+       ALA TRASERA
+       ================================================== -->
+
+  <g class="dragon-wing-back">
+
+    <path
+      d="
+        M 220 112
+        C 220 79, 225 45, 257 17
+        C 269 48, 279 69, 282 91
+        C 295 73, 311 60, 329 51
+        C 319 81, 301 104, 270 126
+        Z
+      "
+      fill="url(#dragonWingGradient)"
+      stroke="#e0aaff"
+      stroke-width="2.5"
+      stroke-linejoin="round"
+    />
+
+    <!-- Nervaduras -->
+    <path
+      d="
+        M220 112 L257 17
+        M220 112 L282 91
+        M220 112 L329 51
+      "
+      fill="none"
+      stroke="#f0d6ff"
+      stroke-opacity="0.45"
+      stroke-width="2"
+    />
+
+  </g>
+
+
+  <!-- ==================================================
+       COLA
+       ================================================== -->
+
+  <path
+    d="
+      M190 126
+      C145 129, 109 151, 79 174
+      C55 192, 29 193, 10 178
+      C41 181, 58 166, 76 148
+      C102 123, 132 105, 177 102
+      Z
+    "
+    fill="url(#dragonBodyGradient)"
+    stroke="#e0aaff"
+    stroke-width="2"
+  />
+
+  <!-- Punta de cola -->
+  <path
+    d="
+      M16 178
+      L4 164
+      L31 171
+      Z
+    "
+    fill="#c77dff"
+    stroke="#e0aaff"
+    stroke-width="1.5"
+  />
+
+
+  <!-- ==================================================
+       ALA DELANTERA
+       ================================================== -->
+
+  <g class="dragon-wing-front">
+
+    <!-- estructura -->
+    <path
+      d="
+        M218 112
+        C195 81, 171 53, 126 29
+        C137 60, 151 78, 170 95
+        C142 80, 115 74, 87 76
+        C111 99, 137 111, 165 118
+        C140 118, 119 129, 101 146
+        C137 143, 171 147, 202 158
+        C214 143, 221 128, 218 112
+        Z
+      "
+      fill="url(#dragonMembrane)"
+      stroke="#e0aaff"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+
+    <!-- huesos del ala -->
+    <path
+      d="
+        M218 112 L126 29
+        M218 112 L87 76
+        M218 112 L101 146
+      "
+      fill="none"
+      stroke="#c77dff"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+
+    <!-- nervaduras -->
+    <path
+      d="
+        M170 95 L126 29
+        M165 118 L87 76
+        M202 158 L101 146
+      "
+      fill="none"
+      stroke="#f0d6ff"
+      stroke-opacity="0.42"
+      stroke-width="1.8"
+    />
+
+  </g>
+
+
+  <!-- ==================================================
+       CUERPO
+       ================================================== -->
+
+  <ellipse
+    cx="221"
+    cy="127"
+    rx="66"
+    ry="38"
+    transform="rotate(-7 221 127)"
+    fill="url(#dragonBodyGradient)"
+    stroke="#e0aaff"
+    stroke-width="2.5"
+  />
+
+  <!-- Vientre -->
+  <path
+    d="
+      M178 137
+      C202 157, 239 161, 269 143
+      C247 166, 201 172, 169 147
+      Z
+    "
+    fill="#f0d6ff"
+    opacity="0.25"
+  />
+
+
+  <!-- ==================================================
+       CUELLO
+       ================================================== -->
+
+  <path
+    d="
+      M259 119
+      C278 103, 292 86, 310 82
+      C328 79, 339 88, 346 103
+      C326 102, 314 111, 303 126
+      C289 143, 273 147, 253 144
+      Z
+    "
+    fill="url(#dragonBodyGradient)"
+    stroke="#e0aaff"
+    stroke-width="2.5"
+  />
+
+
+  <!-- ==================================================
+       ESPINAS DEL LOMO
+       ================================================== -->
+
+  <path
+    d="
+      M181 97 L188 78 L197 99
+      M205 91 L214 69 L221 94
+      M232 91 L242 71 L248 99
+      M264 100 L278 82 L280 108
+      M290 88 L302 70 L305 92
+    "
+    fill="#e0aaff"
+    stroke="#c77dff"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+
+
+  <!-- ==================================================
+       CABEZA
+       ================================================== -->
+
+  <path
+    d="
+      M306 84
+      C320 72, 342 69, 356 77
+      C365 82, 371 91, 374 101
+      L399 107
+      C403 108, 405 113, 401 116
+      L374 127
+      C361 137, 337 136, 323 127
+      C311 119, 304 103, 306 84
+      Z
+    "
+    fill="url(#dragonBodyGradient)"
+    stroke="#e0aaff"
+    stroke-width="2.8"
+    stroke-linejoin="round"
+  />
+
+  <!-- Hocico -->
+  <path
+    d="
+      M368 101
+      L402 106
+      Q413 110 402 118
+      L371 127
+      Q381 113 368 101
+      Z
+    "
+    fill="#8b46c5"
+    stroke="#e0aaff"
+    stroke-width="2"
+  />
+
+  <!-- Mandíbula -->
+  <path
+    d="
+      M366 121
+      Q385 126 401 116
+      Q386 137 360 132
+    "
+    fill="#5a189a"
+    stroke="#e0aaff"
+    stroke-width="1.5"
+  />
+
+  <!-- Boca -->
+  <path
+    d="
+      M371 120
+      Q386 120 399 115
+    "
+    fill="none"
+    stroke="#23002e"
+    stroke-width="2.5"
+    stroke-linecap="round"
+  />
+
+  <!-- Dientes -->
+  <path
+    d="
+      M381 120 L384 126 L388 119
+      M391 118 L394 123 L397 116
+    "
+    fill="#ffffff"
+    stroke="#ffffff"
+    stroke-width="1"
+  />
+
+  <!-- Nariz -->
+  <ellipse
+    cx="397"
+    cy="110"
+    rx="2.7"
+    ry="2"
+    fill="#180020"
+  />
+
+
+  <!-- ==================================================
+       CUERNOS
+       ================================================== -->
+
+  <path
+    d="
+      M325 78
+      C315 61, 314 48, 319 38
+      C325 51, 332 60, 338 74
+      Z
+    "
+    fill="#f0d6ff"
+    stroke="#c77dff"
+    stroke-width="2"
+  />
+
+  <path
+    d="
+      M341 75
+      C338 58, 343 45, 352 37
+      C350 53, 353 65, 357 80
+      Z
+    "
+    fill="#d8b4f8"
+    stroke="#c77dff"
+    stroke-width="2"
+  />
+
+
+  <!-- ==================================================
+       OJO
+       ================================================== -->
+
+  <ellipse
+    class="dragon-eye"
+    cx="357"
+    cy="98"
+    rx="5.5"
+    ry="4.5"
+    fill="url(#dragonEyeGradient)"
+  />
+
+  <ellipse
+    cx="358"
+    cy="98"
+    rx="1.5"
+    ry="3"
+    fill="#21002e"
+  />
+
+
+  <!-- ==================================================
+       PATAS
+       ================================================== -->
+
+  <!-- Pata delantera -->
+  <path
+    d="
+      M276 142
+      C286 153, 292 164, 290 177
+      L302 187
+    "
+    fill="none"
+    stroke="#8f4bc1"
+    stroke-width="11"
+    stroke-linecap="round"
+  />
+
+  <!-- Garras delanteras -->
+  <path
+    d="
+      M301 187 L312 189
+      M301 187 L309 196
+      M299 187 L301 199
+    "
+    fill="none"
+    stroke="#f0d6ff"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <!-- Pata trasera -->
+  <path
+    d="
+      M199 150
+      C193 166, 197 177, 210 184
+      L216 194
+    "
+    fill="none"
+    stroke="#7135a6"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+
+  <!-- Garras traseras -->
+  <path
+    d="
+      M216 194 L228 195
+      M216 194 L223 203
+      M214 193 L214 205
+    "
+    fill="none"
+    stroke="#f0d6ff"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+
+  <!-- ==================================================
+       ESCAMAS
+       ================================================== -->
+
+  <g
+    fill="none"
+    stroke="#f0d6ff"
+    stroke-opacity="0.35"
+    stroke-width="1.5"
+  >
+    <path d="M190 117 Q198 108 206 117"/>
+    <path d="M208 112 Q216 103 224 112"/>
+    <path d="M226 112 Q234 103 242 112"/>
+    <path d="M199 130 Q207 121 215 130"/>
+    <path d="M218 128 Q226 119 234 128"/>
+    <path d="M238 126 Q246 117 254 126"/>
+  </g>
+
+
+  <!-- ==================================================
+       DESTELLOS MÁGICOS
+       ================================================== -->
+
+  <circle
+    class="dragon-spark"
+    cx="94"
+    cy="55"
+    r="3"
+    fill="#ffffff"
+  />
+
+  <circle
+    class="dragon-spark"
+    cx="72"
+    cy="96"
+    r="2.4"
+    fill="#e0aaff"
+  />
+
+  <circle
+    class="dragon-spark"
+    cx="118"
+    cy="165"
+    r="2"
+    fill="#c77dff"
+  />
+
+</svg>
 
       <div class="start-screen" id="env5" style="background: radial-gradient(circle at center, #2a1b40 0%, #090510 100%);">
         <div style="position: relative; margin-bottom: 20px;">

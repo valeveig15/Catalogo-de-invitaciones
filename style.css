@@ -1,0 +1,181 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html { width: 100%; height: 100%; overflow: hidden; font-family: 'Montserrat', sans-serif; background-color: #08080a; color: #fff; }
+
+    .top-nav-hint {
+      position: fixed; top: 15px; left: 50%; transform: translateX(-50%); z-index: 999;
+      background: rgba(15, 15, 20, 0.85); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px 22px; border-radius: 30px;
+      font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; pointer-events: none;
+      display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      animation: pulseHint 2.5s infinite;
+    }
+    @keyframes pulseHint {
+      0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+      50% { transform: translateX(-50%) scale(1.04); opacity: 1; }
+    }
+
+    .horizontal-slider { display: flex; width: 100vw; height: 100vh; overflow-x: scroll; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+    .card-wrapper { flex: 0 0 100vw; width: 100vw; height: 100vh; scroll-snap-align: start; overflow-y: scroll; scroll-snap-type: y mandatory; position: relative; }
+    .card-wrapper.single-page { overflow-y: auto; scroll-snap-type: none; display: flex; justify-content: center; align-items: flex-start; padding: 60px 20px; }
+
+    .card-section { width: 100%; min-height: 100vh; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 24px; position: relative; overflow: hidden; }
+
+    /* ESTILOS DE CONTADOR REGRESIVO */
+    .countdown-grid { display: flex; justify-content: center; gap: 10px; margin: 15px 0; z-index: 2; }
+    .time-box { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); padding: 8px 12px; border-radius: 12px; min-width: 60px; text-align: center; }
+    .time-box .num { font-size: 1.2rem; font-weight: 700; display: block; }
+    .time-box .label { font-size: 0.6rem; text-transform: uppercase; opacity: 0.8; letter-spacing: 1px; }
+
+    .btn-action {
+      margin-top: 12px; padding: 12px 24px; border: none; border-radius: 30px; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .btn-action:hover { transform: translateY(-3px) scale(1.03); }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px); padding: 20px; border-radius: 20px; max-width: 380px; width: 100%; margin: 10px 0;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25); z-index: 2; position: relative;
+    }
+
+    .photo-frame { width: 200px; height: 260px; border-radius: 18px; object-fit: cover; margin: 10px 0; box-shadow: 0 12px 30px rgba(0,0,0,0.4); z-index: 2; position: relative; }
+    
+    .scroll-down-hint { position: absolute; bottom: 20px; font-size: 0.8rem; letter-spacing: 1px; opacity: 0.7; display: flex; flex-direction: column; align-items: center; gap: 4px; animation: bounceDown 2s infinite; z-index: 2; }
+    @keyframes bounceDown { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-8px); } }
+
+    .timeline { width: 100%; max-width: 340px; text-align: left; margin: 10px 0; }
+    .timeline-item { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.15); font-size: 0.88rem; }
+    .timeline-time { font-weight: 700; min-width: 70px; }
+
+    .btn-gallery { background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: #fff; font-weight: 700; border: none; }
+
+    /* Pantallas de Inicio / Sobres e Interacciones */
+    .start-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease; padding: 20px; text-align: center; }
+    .start-screen.opened { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+
+    /* Visuales Animados Fijos/Continuos */
+    /* Burbujas EXCLUSIVAS para la invitación acuática */
+    .aquatic-bubbles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: hidden; }
+    .bubble { position: absolute; bottom: -30px; background: rgba(144, 224, 239, 0.25); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50%; animation: rise 8s infinite ease-in; }
+    .bubble:nth-child(1) { width: 18px; height: 18px; left: 10%; animation-duration: 7s; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 28px; height: 28px; left: 25%; animation-duration: 9s; animation-delay: 2s; }
+    .bubble:nth-child(3) { width: 12px; height: 12px; left: 40%; animation-duration: 6s; animation-delay: 1s; }
+    .bubble:nth-child(4) { width: 22px; height: 22px; left: 60%; animation-duration: 8s; animation-delay: 3s; }
+    .bubble:nth-child(5) { width: 32px; height: 32px; left: 75%; animation-duration: 11s; animation-delay: 1.5s; }
+    .bubble:nth-child(6) { width: 15px; height: 15px; left: 90%; animation-duration: 7.5s; animation-delay: 4s; }
+    @keyframes rise {
+      0% { bottom: -30px; transform: translateX(0); opacity: 0; }
+      20% { opacity: 0.7; }
+      100% { bottom: 105%; transform: translateX(30px); opacity: 0; }
+    }
+
+    /* DRAGÓN ESTILO 3D (Inspirado en el dragón de alas desplegadas) */
+    .flying-dragon { position: absolute; width: 280px; height: 180px; opacity: 0.8; animation: flyDragon 16s ease-in-out infinite; z-index: 1; pointer-events: none; filter: drop-shadow(0 0 15px rgba(224, 170, 255, 0.6)); }
+    .wing-left { transform-origin: 110px 50px; animation: flapLeft 1.2s infinite ease-in-out alternate; }
+    .wing-right { transform-origin: 110px 50px; animation: flapRight 1.2s infinite ease-in-out alternate; }
+    @keyframes flapLeft { 0% { transform: rotate(0deg) scaleY(1); } 100% { transform: rotate(-25deg) scaleY(0.6); } }
+    @keyframes flapRight { 0% { transform: rotate(0deg) scaleY(1); } 100% { transform: rotate(25deg) scaleY(0.6); } }
+    @keyframes flyDragon {
+      0% { left: -35%; top: 65%; transform: scale(0.6) rotate(10deg); }
+      50% { left: 35%; top: 10%; transform: scale(1.1) rotate(-5deg); }
+      100% { left: 110%; top: 55%; transform: scale(0.7) rotate(8deg); }
+    }
+
+    /* MACETAS ILUSTRADAS TEMÁTICA JARDÍN (Basadas en la imagen adjunta) */
+    .potted-plants-container { position: absolute; bottom: 0; left: 0; width: 100%; display: flex; justify-content: center; align-items: flex-end; opacity: 0.85; z-index: 1; pointer-events: none; padding-bottom: 5px; }
+    .potted-plants-svg { width: 100%; max-width: 480px; height: auto; max-height: 160px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5)); }
+
+    /* Botones de Inicio unificados */
+    .btn-start-custom {
+      padding: 14px 28px; border-radius: 30px; font-size: 0.95rem; font-weight: 700;
+      letter-spacing: 1px; cursor: pointer; border: none; display: inline-flex;
+      align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .btn-start-custom:hover { transform: scale(1.05); }
+
+    /* TEMAS DE INVITACIÓN MULTI-SECCIÓN */
+    /* 1. Vintage */
+    .theme-vintage { background: #1a1412; color: #e8d8c8; font-family: 'Playfair Display', serif; }
+    .theme-vintage .card-section { background: radial-gradient(circle at center, #2d221e 0%, #15100e 100%); border-bottom: 1px solid rgba(212, 163, 115, 0.15); }
+    .theme-vintage h1 { font-family: 'Great Vibes', cursive; font-size: 4.5rem; color: #d4a373; }
+    .theme-vintage h2 { letter-spacing: 3px; color: #faedcd; }
+    .theme-vintage .btn-action, .theme-vintage .btn-start-custom { background: #d4a373; color: #1a1412; }
+
+    /* 2. Acuático */
+    .theme-aquatic { background: #031325; color: #e0f4fc; font-family: 'Montserrat', sans-serif; }
+    .theme-aquatic .card-section { background: radial-gradient(circle at center, #0a2d4d 0%, #020b14 100%); border-bottom: 1px solid rgba(0, 180, 216, 0.2); }
+    .theme-aquatic h1 { font-family: 'Pacifico', cursive; font-size: 3.8rem; color: #90e0ef; text-shadow: 0 0 15px rgba(144, 224, 239, 0.5); }
+    .theme-aquatic h2 { font-family: 'Cinzel', serif; color: #00b4d8; letter-spacing: 2px; }
+    .theme-aquatic .btn-action, .theme-aquatic .btn-start-custom { background: #00b4d8; color: #031325; }
+
+    /* 3. Neón */
+    .theme-neon { background: #090a0f; color: #e0e6ed; font-family: 'Poppins', sans-serif; }
+    .theme-neon .card-section { background: radial-gradient(circle at center, #141824 0%, #08090d 100%); border-bottom: 1px solid rgba(0, 240, 255, 0.15); }
+    .theme-neon h1 { font-family: 'Orbitron', sans-serif; font-size: 3.2rem; color: #00f0ff; text-shadow: 0 0 12px rgba(0, 240, 255, 0.6); font-weight: 900; }
+    .theme-neon h2 { color: #ff007f; text-shadow: 0 0 10px rgba(255, 0, 127, 0.5); }
+    .theme-neon .btn-action { background: transparent; color: #00f0ff; border: 2px solid #00f0ff; box-shadow: 0 0 10px rgba(0, 240, 255, 0.3); }
+    
+    /* Vinilo Neón Aumentado */
+    .vinyl-disc { width: 280px; height: 280px; background: repeating-radial-gradient(circle, #111 0px, #111 3px, #222 4px, #222 6px); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 40px rgba(0, 240, 255, 0.6), 0 0 80px rgba(255, 0, 127, 0.3); cursor: pointer; animation: spinDisc 7s linear infinite; margin: 20px 0; border: 4px solid #00f0ff; }
+    @keyframes spinDisc { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .vinyl-center { width: 130px; height: 130px; background: #ff007f; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 700; font-size: 1.2rem; color: #fff; box-shadow: 0 0 20px #ff007f; text-align: center; }
+
+    /* 4. Floral / Jardín */
+    .theme-floral { background: #0b140e; color: #e2ece9; font-family: 'Cinzel', serif; }
+    .theme-floral .card-section { background: radial-gradient(circle at center, #17281d 0%, #08100b 100%); border-bottom: 1px solid rgba(163, 177, 138, 0.15); }
+    .theme-floral h1 { font-family: 'Great Vibes', cursive; font-size: 4.5rem; color: #a3b18a; }
+    .theme-floral h2 { color: #dad7cd; }
+    .theme-floral .btn-action, .theme-floral .btn-start-custom { background: #a3b18a; color: #0b140e; }
+
+    /* 5. Fantasy */
+    .theme-fantasy { background: #0d0914; color: #e6e1f5; font-family: 'Cinzel', serif; }
+    .theme-fantasy .card-section { background: radial-gradient(circle at center, #1c122b 0%, #090510 100%); border-bottom: 1px solid rgba(186, 147, 255, 0.2); }
+    .theme-fantasy h1 { font-family: 'Cinzel Decorative', serif; font-size: 2.8rem; color: #e0aaff; text-shadow: 0 0 15px rgba(199, 125, 255, 0.6); }
+    .theme-fantasy h2 { color: #c77dff; letter-spacing: 3px; }
+    .theme-fantasy .btn-action, .theme-fantasy .btn-start-custom { background: linear-gradient(135deg, #7b2cbf 0%, #3c096c 100%); color: #e0aaff; border: 1px solid #c77dff; }
+
+    /* ESTILOS DE INVITACIONES DE UNA SOLA CARILLA */
+    .invitation-card { width: 100%; max-width: 440px; min-height: 760px; margin: auto; border-radius: 24px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column; justify-content: space-between; padding: 35px 25px; text-align: center; }
+
+    .style-rose-gold { background: linear-gradient(135deg, #2a0813 0%, #150308 100%); border: 2px solid #e8a5b8; }
+    .style-rose-gold .main-title { font-family: 'Great Vibes', cursive; font-size: 3.8rem; color: #fce4ec; text-shadow: 0 0 15px rgba(232, 165, 184, 0.6); }
+    .style-rose-gold .sub-title { font-family: 'Cinzel', serif; font-size: 0.9rem; letter-spacing: 4px; color: #e8a5b8; margin-top: -10px; }
+    .style-rose-gold .accent-btn { background: linear-gradient(45deg, #e8a5b8, #c47188); color: #fff; border: none; padding: 14px 28px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 20px rgba(232, 165, 184, 0.4); }
+
+    .style-gala-gold { background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 2px solid #d4af37; }
+    .style-gala-gold .main-title { font-family: 'Cinzel Decorative', serif; font-size: 2.8rem; color: #f3e5ab; text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+    .style-gala-gold .sub-title { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 5px; color: #d4af37; margin-top: 5px; }
+    .style-gala-gold .accent-btn { background: linear-gradient(45deg, #d4af37, #aa7c11); color: #000; border: none; padding: 14px 28px; border-radius: 50px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4); }
+
+    .style-neon-party { background: #05050a; border: 2px solid #00f2fe; box-shadow: 0 0 30px rgba(0, 242, 254, 0.2); }
+    .style-neon-party .main-title { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #00f2fe; text-shadow: 0 0 10px #00f2fe, 0 0 20px #4facfe; text-transform: uppercase; }
+    .style-neon-party .sub-title { font-family: 'Poppins', sans-serif; font-size: 0.9rem; letter-spacing: 6px; color: #ff0844; margin-top: 5px; text-shadow: 0 0 8px #ff0844; }
+    .style-neon-party .accent-btn { background: linear-gradient(45deg, #00f2fe, #4facfe); color: #000; font-family: 'Orbitron', sans-serif; font-weight: 700; border: none; padding: 14px 28px; border-radius: 8px; cursor: pointer; box-shadow: 0 0 15px rgba(0, 242, 254, 0.6); }
+
+    .style-enchanted-garden { background: linear-gradient(135deg, #0a1f1c 0%, #05100e 100%); border: 2px solid #a8e6cf; }
+    .style-enchanted-garden .main-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 3.2rem; color: #e8f5e9; }
+    .style-enchanted-garden .sub-title { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 4px; color: #a8e6cf; margin-top: -5px; }
+    .style-enchanted-garden .accent-btn { background: linear-gradient(45deg, #a8e6cf, #56ab2f); color: #05100e; font-weight: 600; border: none; padding: 14px 28px; border-radius: 50px; cursor: pointer; box-shadow: 0 5px 20px rgba(168, 230, 207, 0.3); }
+
+    /* PALETA ESMERALDA Y ORO PARA PARTY SUN & VIBES (MODIFICADA) */
+    .style-tropical-pop { background: linear-gradient(135deg, #062c22 0%, #021510 100%); border: 2px solid #d4af37; box-shadow: 0 0 35px rgba(212, 175, 55, 0.3); }
+    .style-tropical-pop .main-title { font-family: 'Pacifico', cursive; font-size: 3.4rem; color: #f3e5ab; text-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+    .style-tropical-pop .sub-title { font-family: 'Poppins', sans-serif; font-size: 0.95rem; letter-spacing: 4px; color: #52b788; font-weight: 700; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+    .style-tropical-pop .accent-btn { background: linear-gradient(45deg, #d4af37, #b8860b); color: #021510; font-family: 'Poppins', sans-serif; font-weight: 800; border: none; padding: 14px 28px; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4); transition: all 0.3s; }
+    .style-tropical-pop .accent-btn:hover { background: #f3e5ab; transform: scale(1.05); }
+
+    .info-section { margin: 15px 0; font-size: 0.95rem; line-height: 1.6; opacity: 0.9; }
+    .info-section i { margin-right: 8px; }
+
+    .action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .btn-secondary { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 12px; border-radius: 50px; cursor: pointer; text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+
+    /* Modales */
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 20px; }
+    .modal-overlay.active { display: flex; }
+    .modal-box { background: #181822; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 25px; max-width: 400px; width: 100%; position: relative; text-align: left; }
+    .modal-box label { display: block; font-size: 0.85rem; margin: 10px 0 4px 0; }
+    .modal-box input, .modal-box select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; }
+    .modal-close { position: absolute; top: 15px; right: 18px; font-size: 1.4rem; cursor: pointer; }

@@ -1,9 +1,0 @@
-{
-  "name": "ArteDeco Studio · Catálogo XV",
-  "short_name": "Catálogo XV",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#f7f1f4",
-  "theme_color": "#b8758c",
-  "description": "Catálogo demostrativo de invitaciones digitales de XV años."
-}
